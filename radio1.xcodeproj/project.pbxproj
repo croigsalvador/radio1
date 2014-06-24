@@ -26,6 +26,10 @@
 		DC75C0F319598B5A00B4F800 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0F219598B5A00B4F800 /* MenuItem.m */; };
 		DC75C0F719598BC600B4F800 /* MenuItem+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0F619598BC600B4F800 /* MenuItem+Helper.m */; };
 		DC75C0FA1959A4A100B4F800 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC75C0F91959A4A100B4F800 /* Images.xcassets */; };
+		DC75C0FF1959AE4B00B4F800 /* ASMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0FE1959AE4B00B4F800 /* ASMenuCollectionViewCell.m */; };
+		DC75C1031959B6D400B4F800 /* UILabel+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1021959B6D400B4F800 /* UILabel+Theme.m */; };
+		DC75C1061959B73B00B4F800 /* UIFont+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1051959B73B00B4F800 /* UIFont+Theme.m */; };
+		DC75C1091959B7B600B4F800 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1081959B7B600B4F800 /* UIColor+Theme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,14 @@
 		DC75C0F619598BC600B4F800 /* MenuItem+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MenuItem+Helper.m"; sourceTree = "<group>"; };
 		DC75C0F819598C8F00B4F800 /* ASRequestEndPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASRequestEndPoints.h; sourceTree = "<group>"; };
 		DC75C0F91959A4A100B4F800 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC75C0FD1959AE4B00B4F800 /* ASMenuCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASMenuCollectionViewCell.h; sourceTree = "<group>"; };
+		DC75C0FE1959AE4B00B4F800 /* ASMenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASMenuCollectionViewCell.m; sourceTree = "<group>"; };
+		DC75C1011959B6D400B4F800 /* UILabel+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Theme.h"; sourceTree = "<group>"; };
+		DC75C1021959B6D400B4F800 /* UILabel+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Theme.m"; sourceTree = "<group>"; };
+		DC75C1041959B73B00B4F800 /* UIFont+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Theme.h"; sourceTree = "<group>"; };
+		DC75C1051959B73B00B4F800 /* UIFont+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Theme.m"; sourceTree = "<group>"; };
+		DC75C1071959B7B600B4F800 /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
+		DC75C1081959B7B600B4F800 /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
 		E39A8D6B0B264FC59C4F2976 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCEC9FFC970470D82111427 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,7 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				DC75C0E419597F1300B4F800 /* Controllers */,
+				DC75C0FB1959AE1B00B4F800 /* Views */,
 				DC75C0F019598B4500B4F800 /* Model */,
+				DC75C1001959B6B000B4F800 /* Theme */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -234,6 +248,37 @@
 				DC75C0F619598BC600B4F800 /* MenuItem+Helper.m */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DC75C0FB1959AE1B00B4F800 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC75C0FC1959AE3400B4F800 /* CollectionViewCells */,
+			);
+			name = Views;
+			path = Controllers/Views;
+			sourceTree = "<group>";
+		};
+		DC75C0FC1959AE3400B4F800 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DC75C0FD1959AE4B00B4F800 /* ASMenuCollectionViewCell.h */,
+				DC75C0FE1959AE4B00B4F800 /* ASMenuCollectionViewCell.m */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		DC75C1001959B6B000B4F800 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				DC75C1011959B6D400B4F800 /* UILabel+Theme.h */,
+				DC75C1021959B6D400B4F800 /* UILabel+Theme.m */,
+				DC75C1041959B73B00B4F800 /* UIFont+Theme.h */,
+				DC75C1051959B73B00B4F800 /* UIFont+Theme.m */,
+				DC75C1071959B7B600B4F800 /* UIColor+Theme.h */,
+				DC75C1081959B7B600B4F800 /* UIColor+Theme.m */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,10 +415,14 @@
 			files = (
 				DC75C0EF195984C600B4F800 /* ASNavigationController.m in Sources */,
 				DC75C0F719598BC600B4F800 /* MenuItem+Helper.m in Sources */,
+				DC75C1091959B7B600B4F800 /* UIColor+Theme.m in Sources */,
 				DC75C0C219597A9700B4F800 /* ASAppDelegate.m in Sources */,
 				DC75C0EC1959801700B4F800 /* ASMenuViewController.m in Sources */,
 				DC75C0F319598B5A00B4F800 /* MenuItem.m in Sources */,
+				DC75C0FF1959AE4B00B4F800 /* ASMenuCollectionViewCell.m in Sources */,
 				DC75C0E919597F6200B4F800 /* ASViewController.m in Sources */,
+				DC75C1031959B6D400B4F800 /* UILabel+Theme.m in Sources */,
+				DC75C1061959B73B00B4F800 /* UIFont+Theme.m in Sources */,
 				DC75C0BE19597A9700B4F800 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Alex Sanz. All rights reserved.
 //
 
-
+//Tags for parsing the MenuItem
 static const NSString * kTagMenuItemMenuItems           = @"menuItems";
 static const NSString * kTagMenuItemDisplayName         = @"diplayName";
 static const NSString * kTagMenuItemTokenAPI            = @"tokenAPI";

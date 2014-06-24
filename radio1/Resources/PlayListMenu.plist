@@ -23,19 +23,19 @@
 		</dict>
 		<dict>
 			<key>diplayName</key>
-			<string>BBC Radio 1Xtra</string>
+			<string>BBC Radio 6 Music</string>
 			<key>tokenAPI</key>
-			<string>1xtra</string>
+			<string>6music</string>
 			<key>imageIcon</key>
-			<string>bbc_1xtra</string>
+			<string>bbc_6music</string>
 			<key>baseColor</key>
 			<dict>
 				<key>Red</key>
-				<integer>30</integer>
+				<integer>71</integer>
 				<key>Green</key>
-				<integer>30</integer>
+				<integer>127</integer>
 				<key>Blue</key>
-				<integer>30</integer>
+				<integer>128</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -57,23 +57,6 @@
 		</dict>
 		<dict>
 			<key>diplayName</key>
-			<string>BBC Radio 6 Music</string>
-			<key>tokenAPI</key>
-			<string>6music</string>
-			<key>imageIcon</key>
-			<string>bbc_6music</string>
-			<key>baseColor</key>
-			<dict>
-				<key>Red</key>
-				<integer>71</integer>
-				<key>Green</key>
-				<integer>127</integer>
-				<key>Blue</key>
-				<integer>128</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>diplayName</key>
 			<string>BBC Asian Network</string>
 			<key>tokenAPI</key>
 			<string>asiannetwork</string>
@@ -82,11 +65,11 @@
 			<key>baseColor</key>
 			<dict>
 				<key>Red</key>
-				<integer>0</integer>
+				<integer>209</integer>
 				<key>Green</key>
-				<integer>0</integer>
+				<integer>3</integer>
 				<key>Blue</key>
-				<integer>0</integer>
+				<integer>116</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -121,6 +104,23 @@
 				<integer>94</integer>
 				<key>Blue</key>
 				<integer>112</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>diplayName</key>
+			<string>BBC Radio 1Xtra</string>
+			<key>tokenAPI</key>
+			<string>1xtra</string>
+			<key>imageIcon</key>
+			<string>bbc_1xtra</string>
+			<key>baseColor</key>
+			<dict>
+				<key>Red</key>
+				<integer>30</integer>
+				<key>Green</key>
+				<integer>30</integer>
+				<key>Blue</key>
+				<integer>30</integer>
 			</dict>
 		</dict>
 	</array>
