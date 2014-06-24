@@ -7,7 +7,8 @@
 //
 
 #import "ASViewController.h"
+#import "MenuItem.h"
 
 @interface ASPlayListViewController : ASViewController
-
+@property (nonatomic, strong) MenuItem *item;
 @end
