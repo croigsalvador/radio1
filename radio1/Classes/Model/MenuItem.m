@@ -11,7 +11,7 @@
 @implementation MenuItem
 
 - (NSString *)description {
-    return  [NSString stringWithFormat:@"DisplayName: %@ - TokeAPI: %@", self.displayName, self.tokenAPI];
+    return  [NSString stringWithFormat:@"DisplayName: %@ - TokenAPI: %@ - Image: %@", self.displayName, self.tokenAPI, self.imageIconName];
 }
 
 @end

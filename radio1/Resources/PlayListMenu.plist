@@ -9,42 +9,119 @@
 			<string>BBC Radio 1</string>
 			<key>tokenAPI</key>
 			<string>radio1</string>
+			<key>imageIcon</key>
+			<string>bbc_radio_one</string>
+			<key>baseColor</key>
+			<dict>
+				<key>Red</key>
+				<integer>30</integer>
+				<key>Green</key>
+				<integer>30</integer>
+				<key>Blue</key>
+				<integer>30</integer>
+			</dict>
 		</dict>
 		<dict>
 			<key>diplayName</key>
 			<string>BBC Radio 1Xtra</string>
 			<key>tokenAPI</key>
 			<string>1xtra</string>
+			<key>imageIcon</key>
+			<string>bbc_1xtra</string>
+			<key>baseColor</key>
+			<dict>
+				<key>Red</key>
+				<integer>30</integer>
+				<key>Green</key>
+				<integer>30</integer>
+				<key>Blue</key>
+				<integer>30</integer>
+			</dict>
 		</dict>
 		<dict>
 			<key>diplayName</key>
 			<string>BBC Radio 2</string>
 			<key>tokenAPI</key>
 			<string>radio2</string>
+			<key>imageIcon</key>
+			<string>bbc_radio_two</string>
+			<key>baseColor</key>
+			<dict>
+				<key>Red</key>
+				<integer>236</integer>
+				<key>Green</key>
+				<integer>122</integer>
+				<key>Blue</key>
+				<integer>7</integer>
+			</dict>
 		</dict>
 		<dict>
 			<key>diplayName</key>
 			<string>BBC Radio 6 Music</string>
 			<key>tokenAPI</key>
 			<string>6music</string>
+			<key>imageIcon</key>
+			<string>bbc_6music</string>
+			<key>baseColor</key>
+			<dict>
+				<key>Red</key>
+				<integer>71</integer>
+				<key>Green</key>
+				<integer>127</integer>
+				<key>Blue</key>
+				<integer>128</integer>
+			</dict>
 		</dict>
 		<dict>
 			<key>diplayName</key>
 			<string>BBC Asian Network</string>
 			<key>tokenAPI</key>
 			<string>asiannetwork</string>
+			<key>imageIcon</key>
+			<string>bbc_asian_network</string>
+			<key>baseColor</key>
+			<dict>
+				<key>Red</key>
+				<integer>0</integer>
+				<key>Green</key>
+				<integer>0</integer>
+				<key>Blue</key>
+				<integer>0</integer>
+			</dict>
 		</dict>
 		<dict>
 			<key>diplayName</key>
 			<string>BBC Radio Scotland</string>
 			<key>tokenAPI</key>
 			<string>radioscotland</string>
+			<key>imageIcon</key>
+			<string>bbc_radio_scotland</string>
+			<key>baseColor</key>
+			<dict>
+				<key>Red</key>
+				<integer>92</integer>
+				<key>Green</key>
+				<integer>32</integer>
+				<key>Blue</key>
+				<integer>102</integer>
+			</dict>
 		</dict>
 		<dict>
 			<key>diplayName</key>
 			<string>BBC Radio Two</string>
 			<key>tokenAPI</key>
 			<string>bbctwo</string>
+			<key>imageIcon</key>
+			<string>bbc_two</string>
+			<key>baseColor</key>
+			<dict>
+				<key>Red</key>
+				<integer>3</integer>
+				<key>Green</key>
+				<integer>94</integer>
+				<key>Blue</key>
+				<integer>112</integer>
+			</dict>
 		</dict>
 	</array>
 </dict>

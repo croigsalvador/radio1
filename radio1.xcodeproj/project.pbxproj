@@ -14,7 +14,6 @@
 		DC75C0BC19597A9700B4F800 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC75C0BA19597A9700B4F800 /* InfoPlist.strings */; };
 		DC75C0BE19597A9700B4F800 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0BD19597A9700B4F800 /* main.m */; };
 		DC75C0C219597A9700B4F800 /* ASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0C119597A9700B4F800 /* ASAppDelegate.m */; };
-		DC75C0C419597A9700B4F800 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC75C0C319597A9700B4F800 /* Images.xcassets */; };
 		DC75C0CB19597A9700B4F800 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC75C0CA19597A9700B4F800 /* XCTest.framework */; };
 		DC75C0CC19597A9700B4F800 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC75C0B119597A9600B4F800 /* Foundation.framework */; };
 		DC75C0CD19597A9700B4F800 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC75C0B519597A9600B4F800 /* UIKit.framework */; };
@@ -26,6 +25,7 @@
 		DC75C0EF195984C600B4F800 /* ASNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0EE195984C600B4F800 /* ASNavigationController.m */; };
 		DC75C0F319598B5A00B4F800 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0F219598B5A00B4F800 /* MenuItem.m */; };
 		DC75C0F719598BC600B4F800 /* MenuItem+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0F619598BC600B4F800 /* MenuItem+Helper.m */; };
+		DC75C0FA1959A4A100B4F800 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC75C0F91959A4A100B4F800 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		DC75C0BF19597A9700B4F800 /* radio1-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "radio1-Prefix.pch"; sourceTree = "<group>"; };
 		DC75C0C019597A9700B4F800 /* ASAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASAppDelegate.h; sourceTree = "<group>"; };
 		DC75C0C119597A9700B4F800 /* ASAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASAppDelegate.m; sourceTree = "<group>"; };
-		DC75C0C319597A9700B4F800 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DC75C0C919597A9700B4F800 /* radio1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = radio1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC75C0CA19597A9700B4F800 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DC75C0D219597A9700B4F800 /* radio1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "radio1Tests-Info.plist"; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		DC75C0F519598BC600B4F800 /* MenuItem+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MenuItem+Helper.h"; sourceTree = "<group>"; };
 		DC75C0F619598BC600B4F800 /* MenuItem+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MenuItem+Helper.m"; sourceTree = "<group>"; };
 		DC75C0F819598C8F00B4F800 /* ASRequestEndPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASRequestEndPoints.h; sourceTree = "<group>"; };
+		DC75C0F91959A4A100B4F800 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E39A8D6B0B264FC59C4F2976 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCEC9FFC970470D82111427 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,7 +135,6 @@
 				DC75C0E119597D4D00B4F800 /* Resources */,
 				DC75C0C019597A9700B4F800 /* ASAppDelegate.h */,
 				DC75C0C119597A9700B4F800 /* ASAppDelegate.m */,
-				DC75C0C319597A9700B4F800 /* Images.xcassets */,
 				DC75C0B819597A9700B4F800 /* Supporting Files */,
 			);
 			path = radio1;
@@ -182,6 +181,7 @@
 		DC75C0E119597D4D00B4F800 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DC75C0F91959A4A100B4F800 /* Images.xcassets */,
 				DC75C0E219597D6800B4F800 /* PlayListMenu.plist */,
 			);
 			path = Resources;
@@ -314,8 +314,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC75C0FA1959A4A100B4F800 /* Images.xcassets in Resources */,
 				DC75C0BC19597A9700B4F800 /* InfoPlist.strings in Resources */,
-				DC75C0C419597A9700B4F800 /* Images.xcassets in Resources */,
 				DC75C0E319597D6800B4F800 /* PlayListMenu.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
