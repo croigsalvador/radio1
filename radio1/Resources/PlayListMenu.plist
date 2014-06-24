@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>diplayName</key>
+		<string>BBC Radio 1</string>
+		<key>tokenAPI</key>
+		<string>radio1</string>
+	</dict>
+	<dict>
+		<key>diplayName</key>
+		<string>BBC Radio 1Xtra</string>
+		<key>tokenAPI</key>
+		<string>1xtra</string>
+	</dict>
+	<dict>
+		<key>diplayName</key>
+		<string>BBC Radio 2</string>
+		<key>tokenAPI</key>
+		<string>radio2</string>
+	</dict>
+	<dict>
+		<key>diplayName</key>
+		<string>BBC Radio 6 Music</string>
+		<key>tokenAPI</key>
+		<string>6music</string>
+	</dict>
+	<dict>
+		<key>diplayName</key>
+		<string>BBC Asian Network</string>
+		<key>tokenAPI</key>
+		<string>asiannetwork</string>
+	</dict>
+	<dict>
+		<key>diplayName</key>
+		<string>BBC Radio Scotland</string>
+		<key>tokenAPI</key>
+		<string>radioscotland</string>
+	</dict>
+	<dict>
+		<key>diplayName</key>
+		<string>BBC Radio Two</string>
+		<key>tokenAPI</key>
+		<string>bbctwo</string>
+	</dict>
+</array>
+</plist>
