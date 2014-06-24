@@ -23,6 +23,9 @@
 		DC75C0E319597D6800B4F800 /* PlayListMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC75C0E219597D6800B4F800 /* PlayListMenu.plist */; };
 		DC75C0E919597F6200B4F800 /* ASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0E819597F6200B4F800 /* ASViewController.m */; };
 		DC75C0EC1959801700B4F800 /* ASMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0EB1959801700B4F800 /* ASMenuViewController.m */; };
+		DC75C0EF195984C600B4F800 /* ASNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0EE195984C600B4F800 /* ASNavigationController.m */; };
+		DC75C0F319598B5A00B4F800 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0F219598B5A00B4F800 /* MenuItem.m */; };
+		DC75C0F719598BC600B4F800 /* MenuItem+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0F619598BC600B4F800 /* MenuItem+Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,13 @@
 		DC75C0E819597F6200B4F800 /* ASViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASViewController.m; sourceTree = "<group>"; };
 		DC75C0EA1959801700B4F800 /* ASMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASMenuViewController.h; sourceTree = "<group>"; };
 		DC75C0EB1959801700B4F800 /* ASMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASMenuViewController.m; sourceTree = "<group>"; };
+		DC75C0ED195984C600B4F800 /* ASNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASNavigationController.h; sourceTree = "<group>"; };
+		DC75C0EE195984C600B4F800 /* ASNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASNavigationController.m; sourceTree = "<group>"; };
+		DC75C0F119598B5A00B4F800 /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		DC75C0F219598B5A00B4F800 /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		DC75C0F519598BC600B4F800 /* MenuItem+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MenuItem+Helper.h"; sourceTree = "<group>"; };
+		DC75C0F619598BC600B4F800 /* MenuItem+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MenuItem+Helper.m"; sourceTree = "<group>"; };
+		DC75C0F819598C8F00B4F800 /* ASRequestEndPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASRequestEndPoints.h; sourceTree = "<group>"; };
 		E39A8D6B0B264FC59C4F2976 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCEC9FFC970470D82111427 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				DC75C0E419597F1300B4F800 /* Controllers */,
+				DC75C0F019598B4500B4F800 /* Model */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -199,8 +210,30 @@
 			children = (
 				DC75C0E719597F6200B4F800 /* ASViewController.h */,
 				DC75C0E819597F6200B4F800 /* ASViewController.m */,
+				DC75C0ED195984C600B4F800 /* ASNavigationController.h */,
+				DC75C0EE195984C600B4F800 /* ASNavigationController.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		DC75C0F019598B4500B4F800 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC75C0F819598C8F00B4F800 /* ASRequestEndPoints.h */,
+				DC75C0F119598B5A00B4F800 /* MenuItem.h */,
+				DC75C0F219598B5A00B4F800 /* MenuItem.m */,
+				DC75C0F419598BB400B4F800 /* Helpers */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC75C0F419598BB400B4F800 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DC75C0F519598BC600B4F800 /* MenuItem+Helper.h */,
+				DC75C0F619598BC600B4F800 /* MenuItem+Helper.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,8 +368,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC75C0EF195984C600B4F800 /* ASNavigationController.m in Sources */,
+				DC75C0F719598BC600B4F800 /* MenuItem+Helper.m in Sources */,
 				DC75C0C219597A9700B4F800 /* ASAppDelegate.m in Sources */,
 				DC75C0EC1959801700B4F800 /* ASMenuViewController.m in Sources */,
+				DC75C0F319598B5A00B4F800 /* MenuItem.m in Sources */,
 				DC75C0E919597F6200B4F800 /* ASViewController.m in Sources */,
 				DC75C0BE19597A9700B4F800 /* main.m in Sources */,
 			);
