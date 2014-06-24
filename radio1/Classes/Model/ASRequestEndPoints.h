@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 Alex Sanz. All rights reserved.
 //
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
+
 //Tags for parsing the MenuItem
 static const NSString * kTagMenuItemMenuItems           = @"menuItems";
 static const NSString * kTagMenuItemDisplayName         = @"diplayName";
@@ -16,5 +19,11 @@ static const NSString * kTagMenuItemBaseColorRed        = @"Red";
 static const NSString * kTagMenuItemBaseColorGreen      = @"Green";
 static const NSString * kTagMenuItemBaseColorBlue       = @"Blue";
 
+//Tags for the playlist api call
 
+static const NSString * kTagAPIPlayList                 = @"playlist";
+static const NSString * kTagAPISongTitle                = @"title";
+static const NSString * kTagAPISongArtist               = @"artist";
+static const NSString * kTagAPISongImageURL             = @"image";
 
+#pragma clang diagnostic pop

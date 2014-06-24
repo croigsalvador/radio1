@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BFD90079641F4AA0AE24A9B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E39A8D6B0B264FC59C4F2976 /* libPods.a */; };
+		DC68FCE31959D2780039162B /* ASPlayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC68FCE21959D2780039162B /* ASPlayListViewController.m */; };
 		DC75C0B219597A9600B4F800 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC75C0B119597A9600B4F800 /* Foundation.framework */; };
 		DC75C0B419597A9600B4F800 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC75C0B319597A9600B4F800 /* CoreGraphics.framework */; };
 		DC75C0B619597A9600B4F800 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC75C0B519597A9600B4F800 /* UIKit.framework */; };
@@ -30,6 +31,9 @@
 		DC75C1031959B6D400B4F800 /* UILabel+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1021959B6D400B4F800 /* UILabel+Theme.m */; };
 		DC75C1061959B73B00B4F800 /* UIFont+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1051959B73B00B4F800 /* UIFont+Theme.m */; };
 		DC75C1091959B7B600B4F800 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1081959B7B600B4F800 /* UIColor+Theme.m */; };
+		DC75C10F1959C24900B4F800 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C10E1959C24900B4F800 /* Song.m */; };
+		DC75C1121959C31B00B4F800 /* Song+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1111959C31B00B4F800 /* Song+Helper.m */; };
+		DC75C1161959C5FC00B4F800 /* ASNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1151959C5FC00B4F800 /* ASNetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC68FCE11959D2780039162B /* ASPlayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlayListViewController.h; sourceTree = "<group>"; };
+		DC68FCE21959D2780039162B /* ASPlayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlayListViewController.m; sourceTree = "<group>"; };
 		DC75C0AE19597A9600B4F800 /* radio1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radio1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC75C0B119597A9600B4F800 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC75C0B319597A9600B4F800 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +85,13 @@
 		DC75C1051959B73B00B4F800 /* UIFont+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Theme.m"; sourceTree = "<group>"; };
 		DC75C1071959B7B600B4F800 /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
 		DC75C1081959B7B600B4F800 /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
+		DC75C10D1959C24900B4F800 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		DC75C10E1959C24900B4F800 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		DC75C1101959C31B00B4F800 /* Song+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Song+Helper.h"; sourceTree = "<group>"; };
+		DC75C1111959C31B00B4F800 /* Song+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Song+Helper.m"; sourceTree = "<group>"; };
+		DC75C1141959C5FC00B4F800 /* ASNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASNetworkManager.h; sourceTree = "<group>"; };
+		DC75C1151959C5FC00B4F800 /* ASNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASNetworkManager.m; sourceTree = "<group>"; };
+		DC75C1171959C86900B4F800 /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		E39A8D6B0B264FC59C4F2976 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCEC9FFC970470D82111427 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +121,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC68FCE01959D2640039162B /* PlayList */ = {
+			isa = PBXGroup;
+			children = (
+				DC68FCE11959D2780039162B /* ASPlayListViewController.h */,
+				DC68FCE21959D2780039162B /* ASPlayListViewController.m */,
+			);
+			path = PlayList;
+			sourceTree = "<group>";
+		};
 		DC75C0A519597A9600B4F800 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +165,7 @@
 		DC75C0B719597A9600B4F800 /* radio1 */ = {
 			isa = PBXGroup;
 			children = (
+				DC75C1171959C86900B4F800 /* Globals.h */,
 				DC75C0E019597D4D00B4F800 /* Classes */,
 				DC75C0E119597D4D00B4F800 /* Resources */,
 				DC75C0C019597A9700B4F800 /* ASAppDelegate.h */,
@@ -206,6 +229,7 @@
 			children = (
 				DC75C0E619597F5700B4F800 /* Common */,
 				DC75C0E519597F3600B4F800 /* Menu */,
+				DC68FCE01959D2640039162B /* PlayList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,9 +258,12 @@
 			isa = PBXGroup;
 			children = (
 				DC75C0F819598C8F00B4F800 /* ASRequestEndPoints.h */,
+				DC75C1131959C5EC00B4F800 /* NetworkManager */,
+				DC75C0F419598BB400B4F800 /* Helpers */,
+				DC75C10D1959C24900B4F800 /* Song.h */,
+				DC75C10E1959C24900B4F800 /* Song.m */,
 				DC75C0F119598B5A00B4F800 /* MenuItem.h */,
 				DC75C0F219598B5A00B4F800 /* MenuItem.m */,
-				DC75C0F419598BB400B4F800 /* Helpers */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,6 +273,8 @@
 			children = (
 				DC75C0F519598BC600B4F800 /* MenuItem+Helper.h */,
 				DC75C0F619598BC600B4F800 /* MenuItem+Helper.m */,
+				DC75C1101959C31B00B4F800 /* Song+Helper.h */,
+				DC75C1111959C31B00B4F800 /* Song+Helper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -279,6 +308,15 @@
 				DC75C1081959B7B600B4F800 /* UIColor+Theme.m */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		DC75C1131959C5EC00B4F800 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				DC75C1141959C5FC00B4F800 /* ASNetworkManager.h */,
+				DC75C1151959C5FC00B4F800 /* ASNetworkManager.m */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,12 +451,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC75C10F1959C24900B4F800 /* Song.m in Sources */,
 				DC75C0EF195984C600B4F800 /* ASNavigationController.m in Sources */,
+				DC68FCE31959D2780039162B /* ASPlayListViewController.m in Sources */,
 				DC75C0F719598BC600B4F800 /* MenuItem+Helper.m in Sources */,
 				DC75C1091959B7B600B4F800 /* UIColor+Theme.m in Sources */,
+				DC75C1121959C31B00B4F800 /* Song+Helper.m in Sources */,
 				DC75C0C219597A9700B4F800 /* ASAppDelegate.m in Sources */,
 				DC75C0EC1959801700B4F800 /* ASMenuViewController.m in Sources */,
 				DC75C0F319598B5A00B4F800 /* MenuItem.m in Sources */,
+				DC75C1161959C5FC00B4F800 /* ASNetworkManager.m in Sources */,
 				DC75C0FF1959AE4B00B4F800 /* ASMenuCollectionViewCell.m in Sources */,
 				DC75C0E919597F6200B4F800 /* ASViewController.m in Sources */,
 				DC75C1031959B6D400B4F800 /* UILabel+Theme.m in Sources */,

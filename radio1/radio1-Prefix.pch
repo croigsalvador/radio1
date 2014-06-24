@@ -13,10 +13,13 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "Globals.h"
     #import "ASRequestEndPoints.h"
 
     #import "UILabel+Theme.h"
     #import "UIFont+Theme.h"
     #import "UIColor+Theme.h"
+
+    #import "ASNetworkManager.h"
 
 #endif

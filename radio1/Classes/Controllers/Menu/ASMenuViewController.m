@@ -113,11 +113,11 @@ static UIEdgeInsets collectionSectionInsets         = {10.0, 10.0, 10.0, 10.0};
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView == self.menuCollectionView) {
-        ASMenuCollectionViewCell *cell= (ASMenuCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:kMenuCellIdentifier forIndexPath:indexPath];
         MenuItem *item=  (MenuItem *)[self.menuData objectAtIndex:indexPath.row];
-        cell.backgroundColor= item.baseColor;
-        
+        ASMenuCollectionViewCell *cell = (ASMenuCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:kMenuCellIdentifier forIndexPath:indexPath];
+        cell.backgroundColor = item.baseColor;
         [cell configureCellWithTitle:item.displayName imageName:item.imageIconName];
+        
         return cell;
     }
     return nil;
@@ -142,7 +142,10 @@ static UIEdgeInsets collectionSectionInsets         = {10.0, 10.0, 10.0, 10.0};
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView == self.menuCollectionView) {
-        NSLog(@"Selected!! - %@", [self.menuData objectAtIndex:indexPath.row]);
+         MenuItem *item=  (MenuItem *)[self.menuData objectAtIndex:indexPath.row];
+        [asNetworkManager getPlayListSongsWithTuneId:item.tokenAPI completion:^(NSArray *results, NSError *error) {
+            
+        }];
     }
 }
 @end
