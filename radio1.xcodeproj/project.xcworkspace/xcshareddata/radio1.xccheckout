@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AA6A7284-6647-42B5-8736-3246FF74B3A6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>radio1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CE592D7D-6E2C-4838-B4FE-3EAAE912978E</key>
+		<string>https://github.com/asanz/radio1.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>radio1.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CE592D7D-6E2C-4838-B4FE-3EAAE912978E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/asanz/radio1.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CE592D7D-6E2C-4838-B4FE-3EAAE912978E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CE592D7D-6E2C-4838-B4FE-3EAAE912978E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>radio1</string>
+		</dict>
+	</array>
+</dict>
+</plist>
