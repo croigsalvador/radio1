@@ -7,6 +7,12 @@
 //
 
 #import "ASAppDelegate.h"
+#import "ASMenuViewController.h"
+#import "ASNavigationController.h"
+
+@interface ASAppDelegate ()
+@property (nonatomic, strong) UIViewController *rootViewController;
+@end
 
 @implementation ASAppDelegate
 
@@ -15,6 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[ASNavigationController alloc] initWithRootViewController:self.rootViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -44,6 +51,14 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Private Getter 
+- (UIViewController *)rootViewController {
+    if (!_rootViewController) {
+        _rootViewController = [[ASMenuViewController alloc] init];
+    }
+    return _rootViewController;
 }
 
 @end
