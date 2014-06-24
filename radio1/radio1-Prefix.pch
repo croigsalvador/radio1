@@ -14,4 +14,9 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "ASRequestEndPoints.h"
+
+    #import "UILabel+Theme.h"
+    #import "UIFont+Theme.h"
+    #import "UIColor+Theme.h"
+
 #endif
