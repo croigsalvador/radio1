@@ -10,9 +10,13 @@
 
 @implementation UILabel (Theme)
 
-+ (UILabel *)baseLabelWithFrame:(CGRect)frame{
++ (UILabel *)baseLabelWithFrame:(CGRect)frame fontSize:(CGFloat)size bold:(BOOL)bold {
     UILabel *label = [[UILabel alloc]initWithFrame:frame];
-    label.font = [UIFont brandMainFontWithSize:17.0];
+    if (bold) {
+        label.font = [UIFont brandMainBoldFontWithSize:size];
+    } else {
+        label.font = [UIFont brandMainFontWithSize:size];
+    }
     label.textColor = [UIColor primaryTextColor];
     label.backgroundColor = [UIColor clearColor];
     label.numberOfLines  = 0;

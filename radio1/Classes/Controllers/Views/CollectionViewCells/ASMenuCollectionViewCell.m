@@ -9,9 +9,8 @@
 #import "ASMenuCollectionViewCell.h"
 
 static UIEdgeInsets viewInsets     = {10.0, 10.0, 10.0, 10.0};
-static CGFloat      kBorderWidth   = 2.0;
-static CGFloat      kBorderRadius  = 10.0;
-
+static CGFloat      kBorderWidth   = 0.8;
+static CGFloat      kBorderRadius  = 0.0;
 
 @interface ASMenuCollectionViewCell ()
 
@@ -45,7 +44,7 @@ static CGFloat      kBorderRadius  = 10.0;
         frameLabel.size.height = self.bounds.size.height/2 ;
         frameLabel.origin.y = CGRectGetMaxY(self.imageView.frame);
         
-        _titleLabel = [UILabel baseLabelWithFrame:frameLabel];
+        _titleLabel = [UILabel baseLabelWithFrame:frameLabel fontSize:14.0 bold:NO];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLabel;

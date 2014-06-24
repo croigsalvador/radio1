@@ -8,14 +8,16 @@
 
 #import "ASMenuViewController.h"
 #import "ASMenuCollectionViewCell.h"
+#import "ASPlayListViewController.h"
+
 #import "MenuItem+Helper.h"
 
 static NSString *kMenuCellIdentifier                = @"MenuCellIdentifier";
 
-static CGFloat kHeightCell                          = 75.0;
-static CGFloat kMinLineSpaceCells                   = 10.0;
-static CGFloat kMinInterSpaceCells                  = 10.0;
-static UIEdgeInsets collectionSectionInsets         = {10.0, 10.0, 10.0, 10.0};
+static CGFloat kHeightCell                          = 65.0;
+static CGFloat kMinLineSpaceCells                   = 5.0;
+static CGFloat kMinInterSpaceCells                  = 5.0;
+static UIEdgeInsets collectionSectionInsets         = {5.0, 5.0, 5.0, 5.0};
 
 @interface ASMenuViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -143,9 +145,10 @@ static UIEdgeInsets collectionSectionInsets         = {10.0, 10.0, 10.0, 10.0};
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView == self.menuCollectionView) {
          MenuItem *item=  (MenuItem *)[self.menuData objectAtIndex:indexPath.row];
-        [asNetworkManager getPlayListSongsWithTuneId:item.tokenAPI completion:^(NSArray *results, NSError *error) {
-            
-        }];
+        
+        ASPlayListViewController *playListVC = [[ASPlayListViewController alloc] init];
+        playListVC.item = item;
+        [self.navigationController   pushViewController:playListVC animated:YES];
     }
 }
 @end

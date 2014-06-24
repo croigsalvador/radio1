@@ -7,5 +7,5 @@
 //
 
 @interface UILabel (Theme)
-+ (UILabel *)baseLabelWithFrame:(CGRect)frame;
++ (UILabel *)baseLabelWithFrame:(CGRect)frame fontSize:(CGFloat)size bold:(BOOL)bold;
 @end

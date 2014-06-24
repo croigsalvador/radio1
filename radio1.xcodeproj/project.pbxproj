@@ -34,6 +34,7 @@
 		DC75C10F1959C24900B4F800 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C10E1959C24900B4F800 /* Song.m */; };
 		DC75C1121959C31B00B4F800 /* Song+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1111959C31B00B4F800 /* Song+Helper.m */; };
 		DC75C1161959C5FC00B4F800 /* ASNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1151959C5FC00B4F800 /* ASNetworkManager.m */; };
+		DCB906B41959D6670072A35B /* ASSongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		DC75C1141959C5FC00B4F800 /* ASNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASNetworkManager.h; sourceTree = "<group>"; };
 		DC75C1151959C5FC00B4F800 /* ASNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASNetworkManager.m; sourceTree = "<group>"; };
 		DC75C1171959C86900B4F800 /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		DCB906B21959D6670072A35B /* ASSongCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASSongCollectionViewCell.h; sourceTree = "<group>"; };
+		DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASSongCollectionViewCell.m; sourceTree = "<group>"; };
 		E39A8D6B0B264FC59C4F2976 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCEC9FFC970470D82111427 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +296,8 @@
 			children = (
 				DC75C0FD1959AE4B00B4F800 /* ASMenuCollectionViewCell.h */,
 				DC75C0FE1959AE4B00B4F800 /* ASMenuCollectionViewCell.m */,
+				DCB906B21959D6670072A35B /* ASSongCollectionViewCell.h */,
+				DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				DC75C1091959B7B600B4F800 /* UIColor+Theme.m in Sources */,
 				DC75C1121959C31B00B4F800 /* Song+Helper.m in Sources */,
 				DC75C0C219597A9700B4F800 /* ASAppDelegate.m in Sources */,
+				DCB906B41959D6670072A35B /* ASSongCollectionViewCell.m in Sources */,
 				DC75C0EC1959801700B4F800 /* ASMenuViewController.m in Sources */,
 				DC75C0F319598B5A00B4F800 /* MenuItem.m in Sources */,
 				DC75C1161959C5FC00B4F800 /* ASNetworkManager.m in Sources */,
