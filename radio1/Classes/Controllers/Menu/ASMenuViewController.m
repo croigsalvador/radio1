@@ -151,4 +151,20 @@ static UIEdgeInsets collectionSectionInsets         = {5.0, 5.0, 5.0, 5.0};
         [self.navigationController   pushViewController:playListVC animated:YES];
     }
 }
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (collectionViewLayout == self.flowLayout) {
+        if (isLandscape) {
+             return CGSizeMake(CGRectGetHeight(self.menuCollectionView.bounds)/2.5, CGRectGetHeight(self.menuCollectionView.bounds)/2.5);
+        }else {
+             return CGSizeMake(CGRectGetWidth(self.menuCollectionView.bounds)-collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
+        }
+          
+    } else {
+        return CGSizeMake(0, 0);
+    }
+}
+
+
 @end
