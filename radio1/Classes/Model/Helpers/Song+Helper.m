@@ -12,10 +12,10 @@
 
 + (Song *)songWithDictionary:(NSDictionary*)dict {
     
-    Song *aSong     = [[Song alloc] init];
-    aSong.title     = dict[kTagAPISongTitle];
-    aSong.artist    = dict[kTagAPISongArtist];
-    aSong.imageURL  = [NSURL URLWithString:dict[kTagAPISongImageURL]];
+    Song *aSong = [[Song alloc] init];
+    aSong.title = dict[kTagAPISongTitle];
+    aSong.artist = dict[kTagAPISongArtist];
+    aSong.imageURL = [NSURL URLWithString:dict[kTagAPISongImageURL]];
     
     return aSong;
 }

@@ -12,13 +12,11 @@
 
 + (UILabel *)baseLabelWithFrame:(CGRect)frame fontSize:(CGFloat)size bold:(BOOL)bold {
     UILabel *label = [[UILabel alloc]initWithFrame:frame];
-    
     if (bold) {
         label.font = [UIFont brandMainBoldFontWithSize:size];
     } else {
         label.font = [UIFont brandMainFontWithSize:size];
     }
-    
     label.textColor = [UIColor primaryTextColor];
     label.backgroundColor = [UIColor clearColor];
     label.numberOfLines  = 0;

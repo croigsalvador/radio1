@@ -7,5 +7,7 @@
 //
 
 @interface UIColor (Theme)
+
 + (UIColor *)primaryTextColor;
+
 @end

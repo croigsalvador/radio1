@@ -9,8 +9,8 @@
 #import "ASSongCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
 
-static const CGFloat      kMargin        = 5.0;
-static const CGFloat      kBorderWidth   = 0.8;
+static const CGFloat kMargin                    = 5.0;
+static const CGFloat kBorderWidth               = 0.8;
 
 @interface ASSongCollectionViewCell ()
 
@@ -56,7 +56,6 @@ static const CGFloat      kBorderWidth   = 0.8;
     return _titleLabel;
 }
 
-
 - (UILabel *)artistLabel {
     if (!_artistLabel) {
         CGRect frame = UIEdgeInsetsInsetRect(self.bounds, UIEdgeInsetsMake(CGRectGetMaxY(self.titleLabel.frame), CGRectGetMaxX(self.songImageView.frame) + kMargin, 0.0, kMargin));
@@ -67,6 +66,7 @@ static const CGFloat      kBorderWidth   = 0.8;
 }
 
 #pragma mark - Public Methods
+
 - (void)configureCellWithTitle:(NSString *)title artist:(NSString *)artist imageURL:(NSURL *)url {
     [self.songImageView setImageWithURL:url]; //set a placeholder
     self.titleLabel.text = title;

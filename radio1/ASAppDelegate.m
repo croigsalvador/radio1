@@ -54,6 +54,7 @@
 }
 
 #pragma mark - Private Getter 
+
 - (UIViewController *)rootViewController {
     if (!_rootViewController) {
         _rootViewController = [[ASMenuViewController alloc] init];

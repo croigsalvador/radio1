@@ -54,12 +54,12 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
     [super didReceiveMemoryWarning];
 }
 
--(void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.flowLayout invalidateLayout];
 }
 
--(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
     [self.flowLayout invalidateLayout];
 }
@@ -87,7 +87,7 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 
 #pragma mark - Private Custom Setters
 
--(void)setMenuData:(NSMutableArray *)menuData {
+- (void)setMenuData:(NSMutableArray *)menuData {
     _menuData = menuData;
     //I'm using this as example of custom setter the reload colud be called in addDataToMenuArrayWithArray: as well
     [self.menuCollectionView reloadData];
@@ -95,9 +95,8 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 
 #pragma mark - Private Custom Getter
 
--(UICollectionView *)menuCollectionView {
+- (UICollectionView *)menuCollectionView {
     if (!_menuCollectionView) {
-        
         _menuCollectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.flowLayout];
         _menuCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _menuCollectionView.dataSource = self;
@@ -105,18 +104,18 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
         _menuCollectionView.backgroundColor = [UIColor blackColor];
         
         [_menuCollectionView registerClass:[ASMenuCollectionViewCell class] forCellWithReuseIdentifier:kMenuCellIdentifier];
-        
     }
     return _menuCollectionView;
 }
 
--(UICollectionViewFlowLayout *)flowLayout {
+- (UICollectionViewFlowLayout *)flowLayout {
     if (!_flowLayout) {
         _flowLayout = [[UICollectionViewFlowLayout alloc] init];
         _flowLayout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds) -collectionSectionInsets.left-collectionSectionInsets.right, kHeightCell);
         _flowLayout.sectionInset = collectionSectionInsets;
         _flowLayout.minimumInteritemSpacing = kMinInterSpaceCells;
         _flowLayout.minimumLineSpacing = kMinLineSpaceCells;
+
     }
     return _flowLayout;
 }
@@ -142,6 +141,7 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
         return 0.0;
     }
 }
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     if (collectionView == self.menuCollectionView) {
         return 1;
@@ -162,13 +162,15 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
     }
 }
 
+#pragma mark - UICollectionViewFlowLayout Delegate
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (collectionViewLayout == self.flowLayout) {
+    if (collectionViewLayout == self.flowLayout && collectionView == self.menuCollectionView) {
         if (isLandscape) {
-             return CGSizeMake(CGRectGetHeight(self.menuCollectionView.bounds)/2.5, CGRectGetHeight(self.menuCollectionView.bounds)/2.5);
+             return CGSizeMake(CGRectGetHeight(collectionView.bounds)/2.5, CGRectGetHeight(self.menuCollectionView.bounds)/2.5);
         }else {
-             return CGSizeMake(CGRectGetWidth(self.menuCollectionView.bounds)-collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
+             return CGSizeMake(CGRectGetWidth(collectionView.bounds)-collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
         }
           
     } else {

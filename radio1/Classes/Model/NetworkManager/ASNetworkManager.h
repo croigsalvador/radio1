@@ -14,6 +14,7 @@
 + (instancetype)sharedInstance;
 
 #pragma mark - Public Methods
+
 - (AFHTTPRequestOperation *)getPlayListSongsWithTuneId:(NSString *)tuneId  completion:( void (^)(NSArray *results, NSError *error) )completionBlock;
 
 @end

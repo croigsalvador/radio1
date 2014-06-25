@@ -36,6 +36,7 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 #pragma mark - Private Methods 
 
 - (void)populateDataFromServer{
@@ -52,7 +53,7 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 
 #pragma mark - Private Custom Getter
 
--(UICollectionView *)playListCollectionView {
+- (UICollectionView *)playListCollectionView {
     if (!_playListCollectionView) {
         
         _playListCollectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.flowLayout];
@@ -67,7 +68,7 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
     return _playListCollectionView;
 }
 
--(UICollectionViewFlowLayout *)flowLayout {
+- (UICollectionViewFlowLayout *)flowLayout {
     if (!_flowLayout) {
         _flowLayout = [[UICollectionViewFlowLayout alloc] init];
         _flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width-collectionSectionInsets.left-collectionSectionInsets.right, kHeightCell);
@@ -109,10 +110,7 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView == self.playListCollectionView) {
-//        MenuItem *item=  (MenuItem *)[self.menuData objectAtIndex:indexPath.row];
-//        [asNetworkManager getPlayListSongsWithTuneId:item.tokenAPI completion:^(NSArray *results, NSError *error) {
-//            
-//        }];
+
     }
 }
 @end

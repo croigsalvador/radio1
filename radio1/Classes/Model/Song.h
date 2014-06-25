@@ -8,9 +8,9 @@
 
 @interface Song : NSObject
 
-@property (nonatomic, copy)   NSString  *title;
-@property (nonatomic, copy)   NSString  *artist;
-@property (nonatomic, strong) NSURL     *imageURL;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *artist;
+@property (nonatomic, strong) NSURL *imageURL;
 
 @end
 
