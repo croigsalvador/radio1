@@ -7,8 +7,10 @@
 //
 
 @interface MenuItem : NSObject
+
 @property (nonatomic, copy)     NSString    *displayName;
 @property (nonatomic, copy)     NSString    *tokenAPI;
 @property (nonatomic, copy)     NSString    *imageIconName;
 @property (nonatomic, strong)   UIColor     *baseColor;
+
 @end

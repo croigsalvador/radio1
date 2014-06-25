@@ -12,12 +12,12 @@
 
 #import "MenuItem+Helper.h"
 
-static NSString *kMenuCellIdentifier                = @"MenuCellIdentifier";
+static NSString * const kMenuCellIdentifier                 = @"MenuCellIdentifier";
 
-static CGFloat kHeightCell                          = 65.0;
-static CGFloat kMinLineSpaceCells                   = 5.0;
-static CGFloat kMinInterSpaceCells                  = 5.0;
-static UIEdgeInsets collectionSectionInsets         = {5.0, 5.0, 5.0, 5.0};
+static const CGFloat kHeightCell                            = 65.0;
+static const CGFloat kMinLineSpaceCells                     = 5.0;
+static const CGFloat kMinInterSpaceCells                    = 5.0;
+static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.0};
 
 @interface ASMenuViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -54,14 +54,24 @@ static UIEdgeInsets collectionSectionInsets         = {5.0, 5.0, 5.0, 5.0};
     [super didReceiveMemoryWarning];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.flowLayout invalidateLayout];
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    [self.flowLayout invalidateLayout];
+}
+
 #pragma mark - Private Methods
 
 //Example of loading data with nsinvocationoperation, the array is not too big but it's just an example of async operations
 - (void)populateMenuArrayAsynchronous {
     
     NSMutableArray *dataArray = [[NSMutableArray alloc] init];
-    NSString *path          = [[NSBundle mainBundle] pathForResource:@"PlayListMenu" ofType:@"plist"];
-    NSDictionary *menuDict  = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"PlayListMenu" ofType:@"plist"];
+    NSDictionary *menuDict = [NSDictionary dictionaryWithContentsOfFile:path];
     
     NSArray *menuArray = [menuDict objectForKey:kTagMenuItemMenuItems];
     for (NSDictionary *menuItemDic in menuArray) {
@@ -103,7 +113,7 @@ static UIEdgeInsets collectionSectionInsets         = {5.0, 5.0, 5.0, 5.0};
 -(UICollectionViewFlowLayout *)flowLayout {
     if (!_flowLayout) {
         _flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        _flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width-collectionSectionInsets.left-collectionSectionInsets.right, kHeightCell);
+        _flowLayout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds) -collectionSectionInsets.left-collectionSectionInsets.right, kHeightCell);
         _flowLayout.sectionInset = collectionSectionInsets;
         _flowLayout.minimumInteritemSpacing = kMinInterSpaceCells;
         _flowLayout.minimumLineSpacing = kMinLineSpaceCells;
@@ -144,11 +154,11 @@ static UIEdgeInsets collectionSectionInsets         = {5.0, 5.0, 5.0, 5.0};
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView == self.menuCollectionView) {
-         MenuItem *item=  (MenuItem *)[self.menuData objectAtIndex:indexPath.row];
+        MenuItem *item = (MenuItem *)[self.menuData objectAtIndex:indexPath.row];
         
         ASPlayListViewController *playListVC = [[ASPlayListViewController alloc] init];
         playListVC.item = item;
-        [self.navigationController   pushViewController:playListVC animated:YES];
+        [self.navigationController pushViewController:playListVC animated:YES];
     }
 }
 

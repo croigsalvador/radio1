@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Alex Sanz. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface ASSongCollectionViewCell : UICollectionViewCell
+
 - (void)configureCellWithTitle:(NSString *)title artist:(NSString *)artist imageURL:(NSURL *)url;
+
 @end

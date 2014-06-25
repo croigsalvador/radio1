@@ -10,12 +10,11 @@
 #import "ASSongCollectionViewCell.h"
 #import "Song.h"
 
-static NSString *kPlayListCellIdentifier            = @"PlayListCellIdentifier";
-static CGFloat kHeightCell                          = 80.0;
-static CGFloat kMinLineSpaceCells                   = 5.0;
-static CGFloat kMinInterSpaceCells                  = 5.0;
-static UIEdgeInsets collectionSectionInsets         = {5.0, 5.0, 5.0, 5.0};
-
+static NSString * const kPlayListCellIdentifier             = @"PlayListCellIdentifier";
+static const CGFloat kHeightCell                            = 80.0;
+static const CGFloat kMinLineSpaceCells                     = 5.0;
+static const CGFloat kMinInterSpaceCells                    = 5.0;
+static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.0};
 
 @interface ASPlayListViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 

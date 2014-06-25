@@ -10,20 +10,20 @@
 #pragma clang diagnostic ignored "-Wunused-variable"
 
 //Tags for parsing the MenuItem
-static const NSString * kTagMenuItemMenuItems           = @"menuItems";
-static const NSString * kTagMenuItemDisplayName         = @"diplayName";
-static const NSString * kTagMenuItemTokenAPI            = @"tokenAPI";
-static const NSString * kTagMenuItemImageIcon           = @"imageIcon";
-static const NSString * kTagMenuItemBaseColor           = @"baseColor";
-static const NSString * kTagMenuItemBaseColorRed        = @"Red";
-static const NSString * kTagMenuItemBaseColorGreen      = @"Green";
-static const NSString * kTagMenuItemBaseColorBlue       = @"Blue";
+static NSString * const kTagMenuItemMenuItems           = @"menuItems";
+static NSString * const kTagMenuItemDisplayName         = @"diplayName";
+static NSString * const kTagMenuItemTokenAPI            = @"tokenAPI";
+static NSString * const kTagMenuItemImageIcon           = @"imageIcon";
+static NSString * const kTagMenuItemBaseColor           = @"baseColor";
+static NSString * const kTagMenuItemBaseColorRed        = @"Red";
+static NSString * const kTagMenuItemBaseColorGreen      = @"Green";
+static NSString * const kTagMenuItemBaseColorBlue       = @"Blue";
 
 //Tags for the playlist api call
 
-static const NSString * kTagAPIPlayList                 = @"playlist";
-static const NSString * kTagAPISongTitle                = @"title";
-static const NSString * kTagAPISongArtist               = @"artist";
-static const NSString * kTagAPISongImageURL             = @"image";
+static NSString * const kTagAPIPlayList                 = @"playlist";
+static NSString * const kTagAPISongTitle                = @"title";
+static NSString * const kTagAPISongArtist               = @"artist";
+static NSString * const kTagAPISongImageURL             = @"image";
 
 #pragma clang diagnostic pop

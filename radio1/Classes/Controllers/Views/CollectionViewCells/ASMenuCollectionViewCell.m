@@ -8,9 +8,9 @@
 
 #import "ASMenuCollectionViewCell.h"
 
-static UIEdgeInsets viewInsets     = {10.0, 10.0, 10.0, 10.0};
-static CGFloat      kBorderWidth   = 0.8;
-static CGFloat      kBorderRadius  = 0.0;
+static const UIEdgeInsets viewInsets     = {10.0, 10.0, 10.0, 10.0};
+static const CGFloat      kBorderWidth   = 0.8;
+static const CGFloat      kBorderRadius  = 0.0;
 
 @interface ASMenuCollectionViewCell ()
 
@@ -30,8 +30,7 @@ static CGFloat      kBorderRadius  = 0.0;
         
         self.layer.borderColor  = [UIColor whiteColor].CGColor;
         self.layer.borderWidth  = kBorderWidth;
-        self.layer.cornerRadius = kBorderRadius;
-        self.autoresizingMask   = UIViewAutoresizingFlexibleWidth;
+        self.layer.cornerRadius = kBorderRadius;;
     }
     return self;
 }
@@ -41,11 +40,12 @@ static CGFloat      kBorderRadius  = 0.0;
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         CGRect frameLabel = UIEdgeInsetsInsetRect(self.bounds, viewInsets);
-        frameLabel.size.height = self.bounds.size.height/2 ;
+        frameLabel.size.height = CGRectGetHeight(self.bounds)/2 ;
         frameLabel.origin.y = CGRectGetMaxY(self.imageView.frame);
         
         _titleLabel = [UILabel baseLabelWithFrame:frameLabel fontSize:14.0 bold:NO];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     return _titleLabel;
 }
@@ -53,10 +53,11 @@ static CGFloat      kBorderRadius  = 0.0;
 - (UIImageView *)imageView{
     if (!_imageView) {
         CGRect frameImage = UIEdgeInsetsInsetRect(self.bounds, viewInsets);
-        frameImage.size.height = self.bounds.size.height/2  - viewInsets.top;
+        frameImage.size.height = CGRectGetHeight(self.bounds)/2  - viewInsets.top;
         
         _imageView = [[UIImageView alloc] initWithFrame:frameImage];
         _imageView.contentMode = UIViewContentModeCenter;
+        _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     return _imageView;
 }

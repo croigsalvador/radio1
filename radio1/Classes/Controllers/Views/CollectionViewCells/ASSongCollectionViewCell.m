@@ -9,14 +9,15 @@
 #import "ASSongCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
 
-static CGFloat      kMargin        = 5.0;
-static CGFloat      kBorderWidth   = 0.8;
+static const CGFloat      kMargin        = 5.0;
+static const CGFloat      kBorderWidth   = 0.8;
 
 @interface ASSongCollectionViewCell ()
 
 @property (nonatomic, strong) UIImageView *songImageView;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *artistLabel;
+
 @end
 
 @implementation ASSongCollectionViewCell
@@ -28,9 +29,9 @@ static CGFloat      kBorderWidth   = 0.8;
         [self addSubview:self.titleLabel];
         [self addSubview:self.artistLabel];
         
-        self.layer.borderColor  = [UIColor whiteColor].CGColor;
-        self.layer.borderWidth  = kBorderWidth;
-        self.autoresizingMask   = UIViewAutoresizingFlexibleWidth;
+        self.layer.borderColor = [UIColor whiteColor].CGColor;
+        self.layer.borderWidth = kBorderWidth;
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }
     return self;
 }
@@ -40,7 +41,7 @@ static CGFloat      kBorderWidth   = 0.8;
 - (UIImageView *)songImageView{
     if (!_songImageView) {
         CGRect frame = self.bounds;
-        frame.size.width = frame.size.height;
+        frame.size.width = CGRectGetHeight(frame);
         _songImageView = [[UIImageView alloc] initWithFrame:frame];
     }
     return _songImageView;
@@ -48,8 +49,8 @@ static CGFloat      kBorderWidth   = 0.8;
 
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
-        CGRect frame  = UIEdgeInsetsInsetRect(self.bounds, UIEdgeInsetsMake(kMargin, CGRectGetMaxX( self.songImageView.frame) + kMargin, 0.0, kMargin));
-        frame.size.height =  frame.size.height/2;
+        CGRect frame  = UIEdgeInsetsInsetRect(self.bounds, UIEdgeInsetsMake(kMargin, CGRectGetMaxX(self.songImageView.frame) + kMargin, 0.0, kMargin));
+        frame.size.height =  CGRectGetHeight(frame)/2;
         _titleLabel = [UILabel baseLabelWithFrame:frame fontSize:14.0 bold:YES];
     }
     return _titleLabel;
@@ -58,8 +59,8 @@ static CGFloat      kBorderWidth   = 0.8;
 
 - (UILabel *)artistLabel {
     if (!_artistLabel) {
-        CGRect frame  = UIEdgeInsetsInsetRect(self.bounds, UIEdgeInsetsMake(CGRectGetMaxY(self.titleLabel.frame), CGRectGetMaxX( self.songImageView.frame) + kMargin, 0.0, kMargin));
-        frame.size.height =  frame.size.height/2;
+        CGRect frame = UIEdgeInsetsInsetRect(self.bounds, UIEdgeInsetsMake(CGRectGetMaxY(self.titleLabel.frame), CGRectGetMaxX(self.songImageView.frame) + kMargin, 0.0, kMargin));
+        frame.size.height = CGRectGetHeight(frame)/2;
         _artistLabel = [UILabel baseLabelWithFrame:frame fontSize:12.0 bold:NO];
     }
     return _artistLabel;

@@ -8,7 +8,8 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-variable"
 
-static  NSString *kBaseUrl          = @"http://www.bbc.co.uk/";
-#define asNetworkManager            [ASNetworkManager sharedInstance]
+static  NSString* const kBaseUrl            = @"http://www.bbc.co.uk/";
+#define asNetworkManager                    [ASNetworkManager sharedInstance]
+#define isLandscape                         (!UIInterfaceOrientationIsPortrait([UIDevice currentDevice].orientation))
 
 #pragma clang diagnostic pop

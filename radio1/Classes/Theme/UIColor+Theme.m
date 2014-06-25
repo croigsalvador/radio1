@@ -9,7 +9,8 @@
 #import "UIColor+Theme.h"
 
 @implementation UIColor (Theme)
-+ (UIColor *)primaryTextColor{
+
++ (UIColor *)primaryTextColor {
     return [UIColor whiteColor];
 }
 
