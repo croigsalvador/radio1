@@ -7,6 +7,8 @@
 //
 
 #import "ASPlayListViewController.h"
+#import "ASSongDetailViewController.h"
+
 #import "ASSongCollectionViewCell.h"
 #import "Song.h"
 
@@ -117,7 +119,11 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView == self.playListCollectionView) {
-
+        Song *song = [self.playListData objectAtIndex:indexPath.row];
+        ASSongDetailViewController *songDetailVC = [[ASSongDetailViewController alloc] init];
+        songDetailVC.song = song;
+        
+        [self.navigationController pushViewController:songDetailVC animated:YES];
     }
 }
 

@@ -35,6 +35,7 @@
 		DC75C1121959C31B00B4F800 /* Song+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1111959C31B00B4F800 /* Song+Helper.m */; };
 		DC75C1161959C5FC00B4F800 /* ASNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1151959C5FC00B4F800 /* ASNetworkManager.m */; };
 		DCB906B41959D6670072A35B /* ASSongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */; };
+		DCB906B7195AFCD70072A35B /* ASSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB906B6195AFCD70072A35B /* ASSongDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		DC75C1171959C86900B4F800 /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		DCB906B21959D6670072A35B /* ASSongCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASSongCollectionViewCell.h; sourceTree = "<group>"; };
 		DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASSongCollectionViewCell.m; sourceTree = "<group>"; };
+		DCB906B5195AFCD70072A35B /* ASSongDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASSongDetailViewController.h; sourceTree = "<group>"; };
+		DCB906B6195AFCD70072A35B /* ASSongDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASSongDetailViewController.m; sourceTree = "<group>"; };
 		E39A8D6B0B264FC59C4F2976 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCEC9FFC970470D82111427 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +236,7 @@
 				DC75C0E619597F5700B4F800 /* Common */,
 				DC75C0E519597F3600B4F800 /* Menu */,
 				DC68FCE01959D2640039162B /* PlayList */,
+				DC852E9B195AFCAE00855E4E /* SongDetail */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,6 +326,15 @@
 				DC75C1151959C5FC00B4F800 /* ASNetworkManager.m */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		DC852E9B195AFCAE00855E4E /* SongDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DCB906B5195AFCD70072A35B /* ASSongDetailViewController.h */,
+				DCB906B6195AFCD70072A35B /* ASSongDetailViewController.m */,
+			);
+			path = SongDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +478,7 @@
 				DC75C0C219597A9700B4F800 /* ASAppDelegate.m in Sources */,
 				DCB906B41959D6670072A35B /* ASSongCollectionViewCell.m in Sources */,
 				DC75C0EC1959801700B4F800 /* ASMenuViewController.m in Sources */,
+				DCB906B7195AFCD70072A35B /* ASSongDetailViewController.m in Sources */,
 				DC75C0F319598B5A00B4F800 /* MenuItem.m in Sources */,
 				DC75C1161959C5FC00B4F800 /* ASNetworkManager.m in Sources */,
 				DC75C0FF1959AE4B00B4F800 /* ASMenuCollectionViewCell.m in Sources */,
