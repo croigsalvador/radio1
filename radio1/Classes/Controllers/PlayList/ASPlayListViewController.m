@@ -20,8 +20,8 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 
 @property (nonatomic, strong) UICollectionView *playListCollectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
-
 @property (nonatomic, strong) NSMutableArray *playListData;
+
 @end
 
 @implementation ASPlayListViewController
@@ -35,6 +35,16 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.flowLayout invalidateLayout];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    [self.flowLayout invalidateLayout];
 }
 
 #pragma mark - Private Methods 
@@ -55,7 +65,6 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 
 - (UICollectionView *)playListCollectionView {
     if (!_playListCollectionView) {
-        
         _playListCollectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.flowLayout];
         _playListCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _playListCollectionView.dataSource = self;
@@ -63,7 +72,6 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
         _playListCollectionView.backgroundColor = [UIColor blackColor];
         
         [_playListCollectionView registerClass:[ASSongCollectionViewCell class] forCellWithReuseIdentifier:kPlayListCellIdentifier];
-        
     }
     return _playListCollectionView;
 }
@@ -71,7 +79,6 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 - (UICollectionViewFlowLayout *)flowLayout {
     if (!_flowLayout) {
         _flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        _flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width-collectionSectionInsets.left-collectionSectionInsets.right, kHeightCell);
         _flowLayout.sectionInset = collectionSectionInsets;
         _flowLayout.minimumInteritemSpacing = kMinInterSpaceCells;
         _flowLayout.minimumLineSpacing = kMinLineSpaceCells;
@@ -113,4 +120,20 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 
     }
 }
+
+#pragma mark - UICollectionViewFlowLayout Delegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (collectionViewLayout == self.flowLayout && collectionView == self.playListCollectionView) {
+        if (isLandscape) {
+            return CGSizeMake(CGRectGetWidth(collectionView.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell) ;
+        }else {
+            return CGSizeMake(CGRectGetWidth(collectionView.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
+        }
+    } else {
+        return CGSizeMake(0, 0);
+    }
+}
+
 @end

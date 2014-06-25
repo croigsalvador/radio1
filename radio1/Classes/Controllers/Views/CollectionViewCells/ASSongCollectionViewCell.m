@@ -68,6 +68,7 @@ static const CGFloat kBorderWidth               = 0.8;
 #pragma mark - Public Methods
 
 - (void)configureCellWithTitle:(NSString *)title artist:(NSString *)artist imageURL:(NSURL *)url {
+    self.songImageView.image = nil;
     [self.songImageView setImageWithURL:url]; //set a placeholder
     self.titleLabel.text = title;
     self.artistLabel.text = artist;

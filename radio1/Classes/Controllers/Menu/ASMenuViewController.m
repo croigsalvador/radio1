@@ -14,10 +14,10 @@
 
 static NSString * const kMenuCellIdentifier                 = @"MenuCellIdentifier";
 
-static const CGFloat kHeightCell                            = 65.0;
-static const CGFloat kMinLineSpaceCells                     = 5.0;
-static const CGFloat kMinInterSpaceCells                    = 5.0;
-static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.0};
+static const CGFloat kHeightCell                            = 64.0;
+static const CGFloat kMinLineSpaceCells                     = 8.0;
+static const CGFloat kMinInterSpaceCells                    = 8.0;
+static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.0};
 
 @interface ASMenuViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -170,9 +170,8 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
         if (isLandscape) {
              return CGSizeMake(CGRectGetHeight(collectionView.bounds)/2.5, CGRectGetHeight(self.menuCollectionView.bounds)/2.5);
         }else {
-             return CGSizeMake(CGRectGetWidth(collectionView.bounds)-collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
+             return CGSizeMake(CGRectGetWidth(collectionView.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
         }
-          
     } else {
         return CGSizeMake(0, 0);
     }
