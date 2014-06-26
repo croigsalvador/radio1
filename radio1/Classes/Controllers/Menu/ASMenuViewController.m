@@ -54,16 +54,6 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
     [super didReceiveMemoryWarning];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.flowLayout invalidateLayout];
-}
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-    [self.flowLayout invalidateLayout];
-}
-
 #pragma mark - Private Methods
 
 //Example of loading data with nsinvocationoperation, the array is not too big but it's just an example of async operations
@@ -88,9 +78,11 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
 #pragma mark - Private Custom Setters
 
 - (void)setMenuData:(NSMutableArray *)menuData {
-    _menuData = menuData;
-    //I'm using this as example of custom setter the reload colud be called in addDataToMenuArrayWithArray: as well
-    [self.menuCollectionView reloadData];
+    if (_menuData != menuData) {
+        _menuData = menuData;
+        //I'm using this as example of custom setter the reload colud be called in addDataToMenuArrayWithArray: as well
+        [self.menuCollectionView reloadData];
+    }
 }
 
 #pragma mark - Private Custom Getter
@@ -111,11 +103,11 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
 - (UICollectionViewFlowLayout *)flowLayout {
     if (!_flowLayout) {
         _flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        _flowLayout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds) -collectionSectionInsets.left-collectionSectionInsets.right, kHeightCell);
+        CGFloat width = (!isLandscape)?CGRectGetHeight(self.view.bounds):CGRectGetWidth(self.view.bounds);
+        _flowLayout.itemSize = CGSizeMake(width - collectionSectionInsets.left-collectionSectionInsets.right, kHeightCell);
         _flowLayout.sectionInset = collectionSectionInsets;
         _flowLayout.minimumInteritemSpacing = kMinInterSpaceCells;
         _flowLayout.minimumLineSpacing = kMinLineSpaceCells;
-
     }
     return _flowLayout;
 }
@@ -161,21 +153,5 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
         [self.navigationController pushViewController:playListVC animated:YES];
     }
 }
-
-#pragma mark - UICollectionViewFlowLayout Delegate
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (collectionViewLayout == self.flowLayout && collectionView == self.menuCollectionView) {
-        if (isLandscape) {
-             return CGSizeMake(CGRectGetHeight(self.view.bounds)/2.5, CGRectGetHeight(self.view.bounds)/2.5);
-        }else {
-             return CGSizeMake(CGRectGetWidth(self.view.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
-        }
-    } else {
-        return CGSizeMake(0, 0);
-    }
-}
-
 
 @end

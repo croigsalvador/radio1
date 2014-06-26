@@ -21,6 +21,7 @@ static const CGFloat kMinInterSpaceCells                    = 8.0;
 
 static const CGFloat kImageHeight                           = 200.0;
 static const CGFloat kPlayerHeight                          = 50.0;
+static const CGFloat kLabelHeight                           = 50.0;
 
 @interface ASSongDetailViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -29,6 +30,7 @@ static const CGFloat kPlayerHeight                          = 50.0;
 @property (nonatomic, strong) NSArray *tunesData;
 
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UILabel *artistLabel;
 @property (nonatomic, strong) UIView *playerContentView;
 @property (nonatomic, strong) ASAudioPlayerViewController *playerViewController;
 
@@ -42,6 +44,7 @@ static const CGFloat kPlayerHeight                          = 50.0;
     self.edgesForExtendedLayout =  UIRectEdgeNone;
     
     [self.view addSubview:self.imageView];
+    [self.view addSubview:self.artistLabel];
     [self.view addSubview:self.playerContentView];
     [self.view addSubview:self.tunesCollectionView];
 
@@ -51,6 +54,15 @@ static const CGFloat kPlayerHeight                          = 50.0;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Private Custom Setter
+
+- (void)setSong:(Song *)song {
+    if (_song != song) {
+        _song = song;
+        self.artistLabel.text = self.song.artist;
+    }
 }
 
 #pragma mark - Private Custom Getter 
@@ -109,9 +121,21 @@ static const CGFloat kPlayerHeight                          = 50.0;
         _flowLayout.itemSize = CGSizeMake(74,74);
         _flowLayout.minimumInteritemSpacing = kMinInterSpaceCells;
         _flowLayout.minimumLineSpacing = kMinLineSpaceCells;
-        
     }
     return _flowLayout;
+}
+
+- (UILabel *)artistLabel {
+    if (!_artistLabel) {
+        CGRect frame = self.imageView.frame;
+        frame.size.height = kLabelHeight;
+        frame.origin.y = CGRectGetMaxY(self.imageView.frame) - kLabelHeight;
+        
+        _artistLabel = [UILabel baseLabelWithFrame:frame fontSize:20 bold:YES];
+        _artistLabel.backgroundColor = [UIColor blackColor];
+        _artistLabel.text = self.song.artist;
+    }
+    return _artistLabel;
 }
 
 #pragma mark - Private Methods

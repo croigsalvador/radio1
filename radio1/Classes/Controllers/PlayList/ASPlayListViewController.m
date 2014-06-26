@@ -39,16 +39,6 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
     [super didReceiveMemoryWarning];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.flowLayout invalidateLayout];
-}
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-    [self.flowLayout invalidateLayout];
-}
-
 #pragma mark - Private Methods 
 
 - (void)populateDataFromServer{
@@ -84,9 +74,11 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
         _flowLayout.sectionInset = collectionSectionInsets;
         _flowLayout.minimumInteritemSpacing = kMinInterSpaceCells;
         _flowLayout.minimumLineSpacing = kMinLineSpaceCells;
+        _flowLayout.itemSize = CGSizeMake(CGRectGetWidth(self.playListCollectionView.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
     }
     return _flowLayout;
 }
+
 #pragma mark - CollectionView Datasource
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -124,17 +116,6 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
         songDetailVC.song = song;
         
         [self.navigationController pushViewController:songDetailVC animated:YES];
-    }
-}
-
-#pragma mark - UICollectionViewFlowLayout Delegate
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (collectionViewLayout == self.flowLayout && collectionView == self.playListCollectionView) {
-        return CGSizeMake(CGRectGetWidth(collectionView.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
-    } else {
-        return CGSizeMake(0, 0);
     }
 }
 

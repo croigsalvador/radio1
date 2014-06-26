@@ -96,7 +96,6 @@
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFXMLParserResponseSerializer serializer];
-     NSLog(@"url: %@",  song.mediaStringURL);
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         dispatch_async(self.parsingQueue, ^{
     
@@ -104,12 +103,10 @@
             NSXMLParser *parser  = [[NSXMLParser alloc]initWithData:operation.responseData];
             [media parseXMLResponse:parser];
             dispatch_async(dispatch_get_main_queue(), ^{
-                
                 if (completionBlock) {
                      completionBlock(media, nil);
                 }
             });
-            
         });
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -135,7 +132,6 @@
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"I have more tunes!!! %@",responseObject);
         dispatch_async(self.parsingQueue, ^{
             NSArray * tunesDict = responseObject[@"results"];
             NSMutableArray *tunesResult = [[NSMutableArray alloc] init];
@@ -150,8 +146,7 @@
                 if (completionBlock) {
                     completionBlock(tunesResult, nil);
                 }
-            });
-            
+            });   
         });
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

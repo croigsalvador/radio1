@@ -52,10 +52,10 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.myTimer invalidate];
-    self.myTimer = nil;
+    [self stopPlayingAction:nil];
 }
 
 #pragma mark - Private Custom Getter
@@ -186,11 +186,11 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
 #pragma mark - Public Methods
 
 - (void)playAudioImmediatelyWithURL:(NSURL *)url imageURL:(NSURL *)imageURL title:(NSString *)title artist:(NSString *)artist {
-    self.audioURL = url;
-    [self.tuneImageView setImageWithURL:imageURL];
+    self.audioURL = [url copy];
+    [self.tuneImageView setImageWithURL:[imageURL copy]];
     [self startPlayingAction:nil];
-    self.titleLabel.text = title;
-    self.albumLabel.text = artist;
+    self.titleLabel.text = [title copy];
+    self.albumLabel.text = [artist copy];
 }
 
 #pragma mark - Private Methods 
