@@ -31,6 +31,18 @@ static NSString * const kTagAPISongPlayList             = @"playlist";
 static NSString * const kTagAPIMediaAudioConnection     = @"connection";
 static NSString * const kTagAPIMediaAudioConnectionHref = @"href";
 static NSString * const kTagAPIMediaAudioMedia          = @"media";
-static NSString * const kTagAPIMediaAudioMediaDuration   = @"duration";
+static NSString * const kTagAPIMediaAudioMediaDuration  = @"duration";
+
+//Tags itunes api
+static NSString * const kTagAPIItunesSongTitle          = @"trackName";
+static NSString * const kTagAPIItunesSongArtist         = @"artistName";
+static NSString * const kTagAPIItunesSongAlbum          = @"collectionName";
+static NSString * const kTagAPIItunesSongImageURL       = @"artworkUrl100";
+static NSString * const kTagAPIItunesSongAudioURL       = @"previewUrl";
+
+
+
+
+
 
 #pragma clang diagnostic pop
