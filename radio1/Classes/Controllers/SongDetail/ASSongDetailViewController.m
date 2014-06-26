@@ -19,7 +19,7 @@ static NSString * const kTuneCellIdentifier                 = @"TuneCellIdentifi
 static const CGFloat kMinLineSpaceCells                     = 8.0;
 static const CGFloat kMinInterSpaceCells                    = 8.0;
 
-static const CGFloat kImageHeight                           = 250.0;
+static const CGFloat kImageHeight                           = 200.0;
 static const CGFloat kPlayerHeight                          = 50.0;
 
 @interface ASSongDetailViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
@@ -47,16 +47,6 @@ static const CGFloat kPlayerHeight                          = 50.0;
 
     [self addChildViewController:self.playerViewController toView:self.playerContentView];
     [self populateDataFromServer];
-    
-    [asNetworkManager getRelatedTunesWithArtistName:self.song.artist completion:^(NSArray *results, NSError *error) {
-        if (!error) {
-            self.tunesData = results;
-            [self.tunesCollectionView reloadData];
-        } else {
-            //error
-        }
-    }];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -130,8 +120,17 @@ static const CGFloat kPlayerHeight                          = 50.0;
     __weak __typeof__(self) weakSelf = self;
     [asNetworkManager getSongPlayDetails:self.song completion:^(MediaAudio *result, NSError *error) {
         if (!error) {
-            NSLog(@"URL Audio play: %@ duration: %ld", result.audioURL, result.duration );
+            NSLog(@"URL Audio play: %@ duration: %d", result.audioURL, result.duration );
             [weakSelf.playerViewController playAudioImmediatelyWithURL:result.audioURL imageURL:self.song.imageURL title:self.song.title artist:self.song.artist];
+        } else {
+            //error
+        }
+    }];
+    
+    [asNetworkManager getRelatedTunesWithArtistName:self.song.artist completion:^(NSArray *results, NSError *error) {
+        if (!error) {
+            weakSelf.tunesData = results;
+            [weakSelf.tunesCollectionView reloadData];
         } else {
             //error
         }

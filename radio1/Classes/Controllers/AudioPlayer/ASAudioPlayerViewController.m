@@ -29,14 +29,13 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
 @property (nonatomic, strong) UILabel *albumLabel;
 @property (nonatomic, strong) UILabel *timeLabel;
 
+@property (nonatomic, strong) NSTimer *myTimer;
 @end
 
 @implementation ASAudioPlayerViewController
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:AVPlayerItemDidPlayToEndTimeNotification
-                                                  object:self.playerItem];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad {
@@ -52,6 +51,11 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.myTimer invalidate];
+    self.myTimer = nil;
 }
 
 #pragma mark - Private Custom Getter
@@ -148,7 +152,7 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
                                                         name:AVPlayerItemDidPlayToEndTimeNotification
                                                       object:self.playerItem];
                           
-        self.playerItem = [AVPlayerItem playerItemWithURL:_audioURL];
+        self.playerItem = [AVPlayerItem playerItemWithURL:self.audioURL];
         if (self.playerItem) {
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(audioItemDidFinishPlaying:)
@@ -157,15 +161,26 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
         }
         [self.mediaPlayer replaceCurrentItemWithPlayerItem:self.playerItem];
         [self.mediaPlayer play];
+        self.myTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
+                                                        target:self
+                                                      selector:@selector(currentAudioTime:)
+                                                      userInfo:nil
+                                                       repeats:YES];
+                          
     }];
 }
 
 - (void)stopPlayingAction:(id)sender {
     [self.mediaPlayer pause];
     [UIView transitionFromView:self.stopButton toView:self.playButton
-                      duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {
-        
+                      duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve
+                    completion:^(BOOL finished) {
+                        
+        [self.myTimer invalidate];
+        self.myTimer = nil;
+        self.timeLabel.text = @"--";
     }];
+    
 }
 
 #pragma mark - Public Methods
@@ -178,11 +193,19 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
     self.albumLabel.text = artist;
 }
 
+#pragma mark - Private Methods 
+
+- (void)currentAudioTime:(NSTimer *)timer {
+    CGFloat currentSecond = CMTimeGetSeconds([self.mediaPlayer currentTime]);
+    self.timeLabel.text =[NSString stringWithFormat:@"%.2f",currentSecond ];
+}
+
 #pragma mark - AV Player item notifications
 
 -(void)audioItemDidFinishPlaying:(NSNotification *) notification {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self stopPlayingAction:nil];
+        
     });
 }
 

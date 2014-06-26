@@ -9,7 +9,6 @@
 #import "ASITunesCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
 
-static const CGFloat kMargin                = 8.0;
 @interface ASITunesCollectionViewCell ()
 @property (nonatomic, strong) UIImageView *songImageView;
 @property (nonatomic, strong) UILabel *titleLabel;
