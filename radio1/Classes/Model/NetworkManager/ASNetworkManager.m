@@ -62,7 +62,11 @@
                 NSString *keyPlayList = (NSString*)obj;
                 [playList[keyPlayList] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                     NSDictionary *songDict = (NSDictionary *)obj;
-                    [playListResult addObject:[Song songWithDictionary:songDict]];
+                    Song *aSong = [Song songWithDictionary:songDict];
+                    if (aSong) {
+                        [playListResult addObject:aSong];
+                    }
+
                 }];
             }];
             NSLog(@"End Parsing Songs, songs parsed: [%d]", [playListResult count]);

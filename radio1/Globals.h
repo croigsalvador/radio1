@@ -12,4 +12,6 @@ static  NSString* const kBaseUrl            = @"http://www.bbc.co.uk/";
 #define asNetworkManager                    [ASNetworkManager sharedInstance]
 #define isLandscape                         (!UIInterfaceOrientationIsPortrait([UIDevice currentDevice].orientation))
 
+#define nvl(val)                            (val == [NSNull null])?nil:val
+
 #pragma clang diagnostic pop

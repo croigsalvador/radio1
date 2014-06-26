@@ -22,7 +22,7 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
 
 @property (nonatomic, strong) UICollectionView *playListCollectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
-@property (nonatomic, strong) NSMutableArray *playListData;
+@property (nonatomic, strong) NSArray *playListData;
 
 @end
 
@@ -45,7 +45,7 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
     __weak __typeof__(self) weakSelf = self;
     [asNetworkManager getPlayListSongsWithTuneId:self.item.tokenAPI completion:^(NSArray *results, NSError *error) {
         if (!error) {
-            weakSelf.playListData = [results  mutableCopy];
+            weakSelf.playListData = results;
             [weakSelf.playListCollectionView reloadData];
         } else {
             //error
