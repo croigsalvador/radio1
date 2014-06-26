@@ -14,9 +14,9 @@
 
 static NSString * const kPlayListCellIdentifier             = @"PlayListCellIdentifier";
 static const CGFloat kHeightCell                            = 80.0;
-static const CGFloat kMinLineSpaceCells                     = 5.0;
-static const CGFloat kMinInterSpaceCells                    = 5.0;
-static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.0};
+static const CGFloat kMinLineSpaceCells                     = 8.0;
+static const CGFloat kMinInterSpaceCells                    = 8.0;
+static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.0};
 
 @interface ASPlayListViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -132,11 +132,7 @@ static const UIEdgeInsets collectionSectionInsets           = {5.0, 5.0, 5.0, 5.
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     if (collectionViewLayout == self.flowLayout && collectionView == self.playListCollectionView) {
-        if (isLandscape) {
-            return CGSizeMake(CGRectGetWidth(collectionView.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell) ;
-        }else {
-            return CGSizeMake(CGRectGetWidth(collectionView.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
-        }
+        return CGSizeMake(CGRectGetWidth(collectionView.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
     } else {
         return CGSizeMake(0, 0);
     }

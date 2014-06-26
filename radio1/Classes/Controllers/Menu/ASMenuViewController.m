@@ -168,9 +168,9 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
     
     if (collectionViewLayout == self.flowLayout && collectionView == self.menuCollectionView) {
         if (isLandscape) {
-             return CGSizeMake(CGRectGetHeight(collectionView.bounds)/2.5, CGRectGetHeight(self.menuCollectionView.bounds)/2.5);
+             return CGSizeMake(CGRectGetHeight(self.view.bounds)/2.5, CGRectGetHeight(self.view.bounds)/2.5);
         }else {
-             return CGSizeMake(CGRectGetWidth(collectionView.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
+             return CGSizeMake(CGRectGetWidth(self.view.bounds) - collectionSectionInsets.left - collectionSectionInsets.right, kHeightCell);
         }
     } else {
         return CGSizeMake(0, 0);
