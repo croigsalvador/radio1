@@ -70,7 +70,7 @@ static const CGFloat kPlayerHeight                          = 50.0;
         CGRect frame = self.view.bounds;
         frame.size.height = kImageHeight;
         _imageView = [[UIImageView alloc] initWithFrame:frame];
-        _imageView.backgroundColor= [UIColor redColor];
+        _imageView.backgroundColor= [UIColor blackColor];
        [self.imageView setImageWithURL:self.song.imageURL];
         
     }
@@ -106,7 +106,7 @@ static const CGFloat kPlayerHeight                          = 50.0;
 //        _tunesCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _tunesCollectionView.dataSource = self;
         _tunesCollectionView.delegate = self;
-        _tunesCollectionView.backgroundColor = [UIColor redColor];
+        _tunesCollectionView.backgroundColor = [UIColor blackColor];
         
         [_tunesCollectionView registerClass:[ASITunesCollectionViewCell class] forCellWithReuseIdentifier:kTuneCellIdentifier];
     }
@@ -130,8 +130,8 @@ static const CGFloat kPlayerHeight                          = 50.0;
     __weak __typeof__(self) weakSelf = self;
     [asNetworkManager getSongPlayDetails:self.song completion:^(MediaAudio *result, NSError *error) {
         if (!error) {
-            NSLog(@"URL Audio play: %@ duration: %d", result.audioURL, result.duration );
-            weakSelf.playerViewController.audioURL = result.audioURL;
+            NSLog(@"URL Audio play: %@ duration: %ld", result.audioURL, result.duration );
+            [weakSelf.playerViewController playAudioImmediatelyWithURL:result.audioURL imageURL:self.song.imageURL title:self.song.title artist:self.song.artist];
         } else {
             //error
         }
@@ -173,7 +173,7 @@ static const CGFloat kPlayerHeight                          = 50.0;
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView == self.tunesCollectionView) {
         ItunesSong *song = [self.tunesData objectAtIndex:indexPath.row];
-        [self.playerViewController playAudioImmediatelyWithURL:song.audioURL];
+        [self.playerViewController playAudioImmediatelyWithURL:song.audioURL imageURL:song.imageURL title:song.title artist:song.album];
     }
 }
 
