@@ -8,10 +8,8 @@
 
 @interface ASAudioPlayerViewController : UIViewController
 
-@property (nonatomic, strong) NSURL *audioURL;
-@property (nonatomic, strong) UIImage *imageTune;
 @property (nonatomic, copy) NSString *titleSong;
 
-- (void)playAudioImmediatelyWithURL:(NSURL *)url;
+- (void)playAudioImmediatelyWithURL:(NSURL *)url imageURL:(NSURL *)imageURL title:(NSString *)title artist:(NSString *)artist;
 
 @end
