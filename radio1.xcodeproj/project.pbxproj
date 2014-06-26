@@ -36,6 +36,9 @@
 		DC75C1161959C5FC00B4F800 /* ASNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1151959C5FC00B4F800 /* ASNetworkManager.m */; };
 		DCA8FEE3195B26E900E56283 /* MediaAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8FEE2195B26E900E56283 /* MediaAudio.m */; };
 		DCA8FEEA195C19BB00E56283 /* ASAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8FEE9195C19BB00E56283 /* ASAudioPlayerViewController.m */; };
+		DCA8FEED195C31B700E56283 /* ASITunesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8FEEC195C31B700E56283 /* ASITunesCollectionViewCell.m */; };
+		DCA8FEF0195C327C00E56283 /* ItunesSong.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8FEEF195C327C00E56283 /* ItunesSong.m */; };
+		DCA8FEF3195C32C000E56283 /* ItunesSong+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8FEF2195C32C000E56283 /* ItunesSong+Helper.m */; };
 		DCB906B41959D6670072A35B /* ASSongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */; };
 		DCB906B7195AFCD70072A35B /* ASSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB906B6195AFCD70072A35B /* ASSongDetailViewController.m */; };
 /* End PBXBuildFile section */
@@ -100,6 +103,12 @@
 		DCA8FEE2195B26E900E56283 /* MediaAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaAudio.m; sourceTree = "<group>"; };
 		DCA8FEE8195C19BB00E56283 /* ASAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAudioPlayerViewController.h; sourceTree = "<group>"; };
 		DCA8FEE9195C19BB00E56283 /* ASAudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAudioPlayerViewController.m; sourceTree = "<group>"; };
+		DCA8FEEB195C31B700E56283 /* ASITunesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASITunesCollectionViewCell.h; sourceTree = "<group>"; };
+		DCA8FEEC195C31B700E56283 /* ASITunesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASITunesCollectionViewCell.m; sourceTree = "<group>"; };
+		DCA8FEEE195C327C00E56283 /* ItunesSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItunesSong.h; sourceTree = "<group>"; };
+		DCA8FEEF195C327C00E56283 /* ItunesSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItunesSong.m; sourceTree = "<group>"; };
+		DCA8FEF1195C32C000E56283 /* ItunesSong+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ItunesSong+Helper.h"; sourceTree = "<group>"; };
+		DCA8FEF2195C32C000E56283 /* ItunesSong+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ItunesSong+Helper.m"; sourceTree = "<group>"; };
 		DCB906B21959D6670072A35B /* ASSongCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASSongCollectionViewCell.h; sourceTree = "<group>"; };
 		DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASSongCollectionViewCell.m; sourceTree = "<group>"; };
 		DCB906B5195AFCD70072A35B /* ASSongDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASSongDetailViewController.h; sourceTree = "<group>"; };
@@ -280,6 +289,8 @@
 				DC75C0F219598B5A00B4F800 /* MenuItem.m */,
 				DCA8FEE1195B26E900E56283 /* MediaAudio.h */,
 				DCA8FEE2195B26E900E56283 /* MediaAudio.m */,
+				DCA8FEEE195C327C00E56283 /* ItunesSong.h */,
+				DCA8FEEF195C327C00E56283 /* ItunesSong.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +302,8 @@
 				DC75C0F619598BC600B4F800 /* MenuItem+Helper.m */,
 				DC75C1101959C31B00B4F800 /* Song+Helper.h */,
 				DC75C1111959C31B00B4F800 /* Song+Helper.m */,
+				DCA8FEF1195C32C000E56283 /* ItunesSong+Helper.h */,
+				DCA8FEF2195C32C000E56283 /* ItunesSong+Helper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -311,6 +324,8 @@
 				DC75C0FE1959AE4B00B4F800 /* ASMenuCollectionViewCell.m */,
 				DCB906B21959D6670072A35B /* ASSongCollectionViewCell.h */,
 				DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */,
+				DCA8FEEB195C31B700E56283 /* ASITunesCollectionViewCell.h */,
+				DCA8FEEC195C31B700E56283 /* ASITunesCollectionViewCell.m */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -489,6 +504,7 @@
 			files = (
 				DC75C10F1959C24900B4F800 /* Song.m in Sources */,
 				DC75C0EF195984C600B4F800 /* ASNavigationController.m in Sources */,
+				DCA8FEED195C31B700E56283 /* ASITunesCollectionViewCell.m in Sources */,
 				DC68FCE31959D2780039162B /* ASPlayListViewController.m in Sources */,
 				DC75C0F719598BC600B4F800 /* MenuItem+Helper.m in Sources */,
 				DC75C1091959B7B600B4F800 /* UIColor+Theme.m in Sources */,
@@ -498,7 +514,9 @@
 				DC75C0EC1959801700B4F800 /* ASMenuViewController.m in Sources */,
 				DCA8FEEA195C19BB00E56283 /* ASAudioPlayerViewController.m in Sources */,
 				DCB906B7195AFCD70072A35B /* ASSongDetailViewController.m in Sources */,
+				DCA8FEF0195C327C00E56283 /* ItunesSong.m in Sources */,
 				DC75C0F319598B5A00B4F800 /* MenuItem.m in Sources */,
+				DCA8FEF3195C32C000E56283 /* ItunesSong+Helper.m in Sources */,
 				DC75C1161959C5FC00B4F800 /* ASNetworkManager.m in Sources */,
 				DC75C0FF1959AE4B00B4F800 /* ASMenuCollectionViewCell.m in Sources */,
 				DC75C0E919597F6200B4F800 /* ASViewController.m in Sources */,
