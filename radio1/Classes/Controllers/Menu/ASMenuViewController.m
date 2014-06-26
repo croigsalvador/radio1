@@ -103,8 +103,8 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
 - (UICollectionViewFlowLayout *)flowLayout {
     if (!_flowLayout) {
         _flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        CGFloat width = (!isLandscape)?CGRectGetHeight(self.view.bounds):CGRectGetWidth(self.view.bounds);
-        _flowLayout.itemSize = CGSizeMake(width - collectionSectionInsets.left-collectionSectionInsets.right, kHeightCell);
+        CGFloat width = CGRectGetWidth(self.view.bounds) - collectionSectionInsets.left - collectionSectionInsets.right;
+        _flowLayout.itemSize = CGSizeMake(width, kHeightCell);
         _flowLayout.sectionInset = collectionSectionInsets;
         _flowLayout.minimumInteritemSpacing = kMinInterSpaceCells;
         _flowLayout.minimumLineSpacing = kMinLineSpaceCells;
