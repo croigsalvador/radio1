@@ -17,7 +17,7 @@
     @try { //prevent crashes... data of the json not well formated (sometimes) bcc api...
         aSong.title = nvl(dict[kTagAPISongTitle]);
         aSong.artist = nvl(dict[kTagAPISongArtist]);
-        aSong.imageURL = nvl([NSURL URLWithString:dict[kTagAPISongImageURL]]);
+        aSong.imageURL = [NSURL URLWithString:nvl(dict[kTagAPISongImageURL])];
         aSong.mediaStringURL = nvl(dict[kTagAPISongPlayList]);
     }
     @catch (NSException *exception) {

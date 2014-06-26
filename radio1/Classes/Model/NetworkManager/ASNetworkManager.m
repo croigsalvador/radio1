@@ -69,7 +69,7 @@
 
                 }];
             }];
-            NSLog(@"End Parsing Songs, songs parsed: [%d]", [playListResult count]);
+            NSLog(@"End Parsing Songs, songs parsed: [%lu]", [playListResult count]);
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (completionBlock) {
@@ -144,7 +144,7 @@
                 NSDictionary *songDict = (NSDictionary *)obj;
                 [tunesResult addObject:[ItunesSong itunesSongWithDictionary:songDict]];
             }];
-            NSLog(@"End Parsing itunesSongs, songs parsed: [%d]", [tunesResult count]);
+            NSLog(@"End Parsing itunesSongs, songs parsed: [%lu]", [tunesResult count]);
         
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (completionBlock) {

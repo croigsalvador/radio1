@@ -144,7 +144,7 @@ static const CGFloat kLabelHeight                           = 50.0;
     __weak __typeof__(self) weakSelf = self;
     [asNetworkManager getSongPlayDetails:self.song completion:^(MediaAudio *result, NSError *error) {
         if (!error) {
-            NSLog(@"URL Audio play: %@ duration: %d", result.audioURL, result.duration );
+            NSLog(@"URL Audio play: %@ duration: %ld", result.audioURL, result.duration );
             [weakSelf.playerViewController playAudioImmediatelyWithURL:result.audioURL imageURL:self.song.imageURL title:self.song.title artist:self.song.artist];
         } else {
             //error

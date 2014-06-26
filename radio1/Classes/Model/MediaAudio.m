@@ -11,7 +11,7 @@
 @implementation MediaAudio
 
 - (NSString *)description {
-    return  [NSString stringWithFormat:@"MediaAudio: %@ - duration: %d", [self.audioURL absoluteString], self.duration];
+    return  [NSString stringWithFormat:@"MediaAudio: %@ - duration: %ld", [self.audioURL absoluteString], self.duration];
 }
 
 #pragma mark - Public Methods 
