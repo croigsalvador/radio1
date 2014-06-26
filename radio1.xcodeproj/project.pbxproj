@@ -34,6 +34,8 @@
 		DC75C10F1959C24900B4F800 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C10E1959C24900B4F800 /* Song.m */; };
 		DC75C1121959C31B00B4F800 /* Song+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1111959C31B00B4F800 /* Song+Helper.m */; };
 		DC75C1161959C5FC00B4F800 /* ASNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C1151959C5FC00B4F800 /* ASNetworkManager.m */; };
+		DCA8FEE3195B26E900E56283 /* MediaAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8FEE2195B26E900E56283 /* MediaAudio.m */; };
+		DCA8FEEA195C19BB00E56283 /* ASAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8FEE9195C19BB00E56283 /* ASAudioPlayerViewController.m */; };
 		DCB906B41959D6670072A35B /* ASSongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */; };
 		DCB906B7195AFCD70072A35B /* ASSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB906B6195AFCD70072A35B /* ASSongDetailViewController.m */; };
 /* End PBXBuildFile section */
@@ -94,6 +96,10 @@
 		DC75C1141959C5FC00B4F800 /* ASNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASNetworkManager.h; sourceTree = "<group>"; };
 		DC75C1151959C5FC00B4F800 /* ASNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASNetworkManager.m; sourceTree = "<group>"; };
 		DC75C1171959C86900B4F800 /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		DCA8FEE1195B26E900E56283 /* MediaAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaAudio.h; sourceTree = "<group>"; };
+		DCA8FEE2195B26E900E56283 /* MediaAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaAudio.m; sourceTree = "<group>"; };
+		DCA8FEE8195C19BB00E56283 /* ASAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAudioPlayerViewController.h; sourceTree = "<group>"; };
+		DCA8FEE9195C19BB00E56283 /* ASAudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAudioPlayerViewController.m; sourceTree = "<group>"; };
 		DCB906B21959D6670072A35B /* ASSongCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASSongCollectionViewCell.h; sourceTree = "<group>"; };
 		DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASSongCollectionViewCell.m; sourceTree = "<group>"; };
 		DCB906B5195AFCD70072A35B /* ASSongDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASSongDetailViewController.h; sourceTree = "<group>"; };
@@ -237,6 +243,7 @@
 				DC75C0E519597F3600B4F800 /* Menu */,
 				DC68FCE01959D2640039162B /* PlayList */,
 				DC852E9B195AFCAE00855E4E /* SongDetail */,
+				DCA8FEE7195C199A00E56283 /* AudioPlayer */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -271,6 +278,8 @@
 				DC75C10E1959C24900B4F800 /* Song.m */,
 				DC75C0F119598B5A00B4F800 /* MenuItem.h */,
 				DC75C0F219598B5A00B4F800 /* MenuItem.m */,
+				DCA8FEE1195B26E900E56283 /* MediaAudio.h */,
+				DCA8FEE2195B26E900E56283 /* MediaAudio.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +344,15 @@
 				DCB906B6195AFCD70072A35B /* ASSongDetailViewController.m */,
 			);
 			path = SongDetail;
+			sourceTree = "<group>";
+		};
+		DCA8FEE7195C199A00E56283 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				DCA8FEE8195C19BB00E56283 /* ASAudioPlayerViewController.h */,
+				DCA8FEE9195C19BB00E56283 /* ASAudioPlayerViewController.m */,
+			);
+			path = AudioPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,6 +496,7 @@
 				DC75C0C219597A9700B4F800 /* ASAppDelegate.m in Sources */,
 				DCB906B41959D6670072A35B /* ASSongCollectionViewCell.m in Sources */,
 				DC75C0EC1959801700B4F800 /* ASMenuViewController.m in Sources */,
+				DCA8FEEA195C19BB00E56283 /* ASAudioPlayerViewController.m in Sources */,
 				DCB906B7195AFCD70072A35B /* ASSongDetailViewController.m in Sources */,
 				DC75C0F319598B5A00B4F800 /* MenuItem.m in Sources */,
 				DC75C1161959C5FC00B4F800 /* ASNetworkManager.m in Sources */,
@@ -486,6 +505,7 @@
 				DC75C1031959B6D400B4F800 /* UILabel+Theme.m in Sources */,
 				DC75C1061959B73B00B4F800 /* UIFont+Theme.m in Sources */,
 				DC75C0BE19597A9700B4F800 /* main.m in Sources */,
+				DCA8FEE3195B26E900E56283 /* MediaAudio.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
