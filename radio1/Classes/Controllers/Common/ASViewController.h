@@ -8,4 +8,7 @@
 
 @interface ASViewController : UIViewController
 
+#pragma mark - Public methods
+- (void)addChildViewController:(UIViewController *)childController toView:(UIView *)toView;
+
 @end

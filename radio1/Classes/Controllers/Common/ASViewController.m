@@ -22,4 +22,19 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Public methods
+
+- (void)addChildViewController:(UIViewController *)childController toView:(UIView *)toView {
+    [self addChildViewController:childController];
+    [childController didMoveToParentViewController:self];
+    
+    CGRect frame = childController.view.frame;
+    frame.size.height = CGRectGetHeight(toView.frame);
+    frame.size.width = CGRectGetWidth(toView.frame);
+    childController.view.frame = frame;
+    
+    [toView addSubview:childController.view];
+}
+
+
 @end
