@@ -9,6 +9,8 @@
 #import "AFHTTPSessionManager.h"
 #import "AFHTTPRequestOperation.h"
 
+@class Song, MediaAudio;
+
 @interface ASNetworkManager : AFHTTPSessionManager
 
 + (instancetype)sharedInstance;
@@ -16,5 +18,5 @@
 #pragma mark - Public Methods
 
 - (AFHTTPRequestOperation *)getPlayListSongsWithTuneId:(NSString *)tuneId  completion:( void (^)(NSArray *results, NSError *error) )completionBlock;
-
+- (AFHTTPRequestOperation *)getSongPlayDetails:(Song *)song   completion:( void (^)(MediaAudio *result, NSError *error) )completionBlock;
 @end

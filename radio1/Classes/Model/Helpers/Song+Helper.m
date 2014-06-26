@@ -16,7 +16,7 @@
     aSong.title = dict[kTagAPISongTitle];
     aSong.artist = dict[kTagAPISongArtist];
     aSong.imageURL = [NSURL URLWithString:dict[kTagAPISongImageURL]];
-    
+    aSong.mediaStringURL = dict[kTagAPISongPlayList];
     return aSong;
 }
 

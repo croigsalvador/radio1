@@ -8,6 +8,7 @@
 
 #import "ASNetworkManager.h"
 #import "Song+Helper.h"
+#import "MediaAudio.h"
 
 @interface ASNetworkManager ()
 
@@ -47,10 +48,10 @@
     NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"GET"
                                                                                  URLString:[NSString stringWithFormat:@"%@%@/%@",kBaseUrl,tuneId,@"playlist.json"]
                                                                                 parameters:nil error:nil];
- 
+    
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
-
+    
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         dispatch_async(self.parsingQueue, ^{
             NSDictionary * playList = responseObject[kTagAPIPlayList];
@@ -70,7 +71,7 @@
                     completionBlock(playListResult, nil);
                 }
             });
-
+            
         });
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -80,7 +81,44 @@
             }
         });
     }];
+    
+    [self.operationQueue addOperation:operation];
+    return operation;
+}
 
+
+- (AFHTTPRequestOperation *)getSongPlayDetails:(Song *)song   completion:( void (^)(MediaAudio *result, NSError *error) )completionBlock {
+    
+    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"GET"
+                                                                                 URLString: song.mediaStringURL
+                                                                                parameters:nil error:nil];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFXMLParserResponseSerializer serializer];
+     NSLog(@"url: %@",  song.mediaStringURL);
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        dispatch_async(self.parsingQueue, ^{
+    
+            MediaAudio *media = [[MediaAudio alloc] init];
+            NSXMLParser *parser  = [[NSXMLParser alloc]initWithData:operation.responseData];
+            [media parseXMLResponse:parser];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                if (completionBlock) {
+                     completionBlock(media, nil);
+                }
+            });
+            
+        });
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (completionBlock) {
+                completionBlock(nil, error);
+            }
+        });
+    }];
+    
     [self.operationQueue addOperation:operation];
     return operation;
 }

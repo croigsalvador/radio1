@@ -25,5 +25,12 @@ static NSString * const kTagAPIPlayList                 = @"playlist";
 static NSString * const kTagAPISongTitle                = @"title";
 static NSString * const kTagAPISongArtist               = @"artist";
 static NSString * const kTagAPISongImageURL             = @"image";
+static NSString * const kTagAPISongPlayList             = @"playlist";
+
+//XML parser tags
+static NSString * const kTagAPIMediaAudioConnection     = @"connection";
+static NSString * const kTagAPIMediaAudioConnectionHref = @"href";
+static NSString * const kTagAPIMediaAudioMedia          = @"media";
+static NSString * const kTagAPIMediaAudioMediaDuration   = @"duration";
 
 #pragma clang diagnostic pop
