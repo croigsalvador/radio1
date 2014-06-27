@@ -72,7 +72,7 @@ static const CGFloat kLabelHeight                           = 50.0;
         CGRect frame = self.view.bounds;
         frame.size.height = kImageHeight;
         _imageView = [[UIImageView alloc] initWithFrame:frame];
-        _imageView.backgroundColor= [UIColor blackColor];
+        _imageView.backgroundColor= [UIColor primaryColor];
        [self.imageView setImageWithURL:self.song.imageURL];
         
     }
@@ -108,7 +108,7 @@ static const CGFloat kLabelHeight                           = 50.0;
 //        _tunesCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _tunesCollectionView.dataSource = self;
         _tunesCollectionView.delegate = self;
-        _tunesCollectionView.backgroundColor = [UIColor blackColor];
+        _tunesCollectionView.backgroundColor = [UIColor primaryColor];
         
         [_tunesCollectionView registerClass:[ASITunesCollectionViewCell class] forCellWithReuseIdentifier:kTuneCellIdentifier];
     }
@@ -132,7 +132,7 @@ static const CGFloat kLabelHeight                           = 50.0;
         frame.origin.y = CGRectGetMaxY(self.imageView.frame) - kLabelHeight;
         
         _artistLabel = [UILabel baseLabelWithFrame:frame fontSize:20 bold:YES];
-        _artistLabel.backgroundColor = [UIColor blackColor];
+        _artistLabel.backgroundColor = [UIColor primaryColor];
         _artistLabel.text = self.song.artist;
     }
     return _artistLabel;

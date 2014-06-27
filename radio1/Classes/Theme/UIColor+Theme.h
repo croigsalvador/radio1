@@ -9,5 +9,6 @@
 @interface UIColor (Theme)
 
 + (UIColor *)primaryTextColor;
-
++ (UIColor *)primaryColor;
++ (UIColor *)secondaryColor;
 @end

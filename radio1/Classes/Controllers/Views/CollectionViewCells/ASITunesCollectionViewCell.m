@@ -38,7 +38,7 @@
     if (!_titleLabel) {
         CGRect frame  = UIEdgeInsetsInsetRect(self.bounds, UIEdgeInsetsMake(CGRectGetWidth(self.bounds)/1.5,0.0, 0.0, 0.0));
         _titleLabel = [UILabel baseLabelWithFrame:frame fontSize:8.0 bold:NO];
-        _titleLabel.backgroundColor = [UIColor blackColor];
+        _titleLabel.backgroundColor = [UIColor secondaryColor];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLabel;

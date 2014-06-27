@@ -40,7 +40,7 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor  blackColor];
+    self.view.backgroundColor = [UIColor primaryColor];
     [self.view addSubview:self.stopButton];
     [self.view addSubview:self.playButton];
     [self.view addSubview:self.tuneImageView];
@@ -101,7 +101,7 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
         CGRect frame = self.playButton.bounds;
         frame.origin.x = CGRectGetWidth(self.playButton.bounds);
         _tuneImageView = [[UIImageView alloc] initWithFrame:frame];
-        _tuneImageView.backgroundColor = [UIColor blackColor];
+        _tuneImageView.backgroundColor = [UIColor primaryColor];
     }
     return _tuneImageView;
 }
@@ -114,7 +114,7 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
         frame.size.height = kHeightLabel;
     
         _titleLabel = [UILabel baseLabelWithFrame:UIEdgeInsetsInsetRect(frame, labelInsets) fontSize:13 bold:YES];
-        _titleLabel.backgroundColor = [UIColor blackColor];
+        _titleLabel.backgroundColor = [UIColor primaryColor];
     }
     return _titleLabel;
 }
@@ -125,7 +125,7 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
         frame.origin.y = CGRectGetMaxY(self.titleLabel.frame);
         
         _albumLabel = [UILabel baseLabelWithFrame:frame fontSize:12 bold:NO];
-        _albumLabel.backgroundColor = [UIColor blackColor];
+        _albumLabel.backgroundColor = [UIColor primaryColor];
     }
     return _albumLabel;
 }
@@ -136,7 +136,7 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
         frame.origin.y = CGRectGetMaxY(self.albumLabel.frame);
         
         _timeLabel = [UILabel baseLabelWithFrame:frame fontSize:12 bold:NO];
-        _timeLabel.backgroundColor = [UIColor blackColor];
+        _timeLabel.backgroundColor = [UIColor primaryColor];
         _timeLabel.text = @"00:01";
     }
     return _timeLabel;

@@ -61,7 +61,7 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
         _playListCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _playListCollectionView.dataSource = self;
         _playListCollectionView.delegate = self;
-        _playListCollectionView.backgroundColor = [UIColor blackColor];
+        _playListCollectionView.backgroundColor = [UIColor primaryColor];
         
         [_playListCollectionView registerClass:[ASSongCollectionViewCell class] forCellWithReuseIdentifier:kPlayListCellIdentifier];
     }

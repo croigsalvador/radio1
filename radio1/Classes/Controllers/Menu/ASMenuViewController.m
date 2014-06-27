@@ -47,7 +47,7 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
     
     NSInvocationOperation * loadOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(populateMenuArrayAsynchronous) object:nil];
     [self.operationQueue addOperation:loadOperation];
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor primaryColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,7 +93,7 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
         _menuCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _menuCollectionView.dataSource = self;
         _menuCollectionView.delegate = self;
-        _menuCollectionView.backgroundColor = [UIColor blackColor];
+        _menuCollectionView.backgroundColor = [UIColor primaryColor];
         
         [_menuCollectionView registerClass:[ASMenuCollectionViewCell class] forCellWithReuseIdentifier:kMenuCellIdentifier];
     }

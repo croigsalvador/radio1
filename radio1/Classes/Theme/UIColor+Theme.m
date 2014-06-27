@@ -13,5 +13,12 @@
 + (UIColor *)primaryTextColor {
     return [UIColor whiteColor];
 }
++ (UIColor *)primaryColor {
+    return [UIColor blackColor];
+}
++ (UIColor *)secondaryColor {
+    return [UIColor colorWithRed:(30.0/255) green:(30.0/255) blue:(30.0/255) alpha:(30.0/255)];
+}
+
 
 @end
