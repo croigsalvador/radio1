@@ -23,10 +23,14 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
 @property (nonatomic, strong) UICollectionView *playListCollectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
 @property (nonatomic, strong) NSArray *playListData;
-
+@property (nonatomic, strong) NSOperation *op;
 @end
 
 @implementation ASPlayListViewController
+
+- (void)dealloc {
+    [self.op cancel];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,7 +47,7 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
 
 - (void)populateDataFromServer{
     __weak __typeof__(self) weakSelf = self;
-    [asNetworkManager getPlayListSongsWithTuneId:self.item.tokenAPI completion:^(NSArray *results, NSError *error) {
+    self.op = [asNetworkManager getPlayListSongsWithTuneId:self.item.tokenAPI completion:^(NSArray *results, NSError *error) {
         if (!error) {
             weakSelf.playListData = results;
             [weakSelf.playListCollectionView reloadData];

@@ -30,12 +30,15 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
 @property (nonatomic, strong) UILabel *timeLabel;
 
 @property (nonatomic, strong) NSTimer *myTimer;
+
+
 @end
 
 @implementation ASAudioPlayerViewController
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"ASAudioPlayerViewController - deallocated!");
 }
 
 - (void)viewDidLoad {

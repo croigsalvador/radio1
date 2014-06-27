@@ -33,11 +33,17 @@ static const CGFloat kLabelHeight                           = 50.0;
 @property (nonatomic, strong) UILabel *artistLabel;
 @property (nonatomic, strong) UIView *playerContentView;
 @property (nonatomic, strong) ASAudioPlayerViewController *playerViewController;
+@property (nonatomic, strong) NSOperation *tunesOp;
+@property (nonatomic, strong) NSOperation *songOp;
 
 @end
 
 @implementation ASSongDetailViewController
 
+- (void)dealloc {
+    [self.tunesOp cancel];
+    [self.songOp cancel];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor greenColor];
@@ -142,7 +148,7 @@ static const CGFloat kLabelHeight                           = 50.0;
 
 - (void)populateDataFromServer{
     __weak __typeof__(self) weakSelf = self;
-    [asNetworkManager getSongPlayDetails:self.song completion:^(MediaAudio *result, NSError *error) {
+     self.songOp =[asNetworkManager getSongPlayDetails:self.song completion:^(MediaAudio *result, NSError *error) {
         if (!error) {
             NSLog(@"URL Audio play: %@ duration: %ld", result.audioURL, result.duration );
             [weakSelf.playerViewController playAudioImmediatelyWithURL:result.audioURL imageURL:weakSelf.song.imageURL title:weakSelf.song.title artist:weakSelf.song.artist];
@@ -151,7 +157,7 @@ static const CGFloat kLabelHeight                           = 50.0;
         }
     }];
     
-    [asNetworkManager getRelatedTunesWithArtistName:self.song.artist completion:^(NSArray *results, NSError *error) {
+    self.tunesOp = [asNetworkManager getRelatedTunesWithArtistName:self.song.artist completion:^(NSArray *results, NSError *error) {
         if (!error) {
             weakSelf.tunesData = results;
             [weakSelf.tunesCollectionView reloadData];
