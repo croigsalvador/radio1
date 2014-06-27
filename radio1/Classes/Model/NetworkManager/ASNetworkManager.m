@@ -46,6 +46,10 @@
 
 - (AFHTTPRequestOperation *)getPlayListSongsWithTuneId:(NSString *)tuneId completion:(void (^)(NSArray *results, NSError *error))completionBlock {
     
+    if (!tuneId) {
+        return nil;
+    }
+    
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET"
                                                                                  URLString:[NSString stringWithFormat:@"%@%@/%@",kBaseUrl,tuneId,@"playlist.json"]
                                                                                 parameters:nil error:nil];
@@ -94,6 +98,10 @@
 
 - (AFHTTPRequestOperation *)getSongPlayDetails:(Song *)song completion:(void (^)(MediaAudio *result, NSError *error))completionBlock {
     
+    if (!song) {
+        return nil;
+    }
+    
     NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"GET"
                                                                                  URLString: song.mediaStringURL
                                                                                 parameters:nil error:nil];
@@ -128,6 +136,10 @@
 
 - (AFHTTPRequestOperation *)getRelatedTunesWithArtistName:(NSString *)artistName completion:(void (^)(NSArray *results, NSError *error))completionBlock {
     
+    if (!artistName) {
+        return nil;
+    }
+   
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET"
                                                                                  URLString:@"https://itunes.apple.com/search"
                                                                                 parameters:@{@"term": artistName} error:nil];
