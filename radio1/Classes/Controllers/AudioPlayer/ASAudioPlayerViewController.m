@@ -156,18 +156,19 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
                                                  selector:@selector(audioItemDidFinishPlaying:)
                                                      name:AVPlayerItemDidPlayToEndTimeNotification
                                                    object:[self.mediaPlayer currentItem]];
+
+        [self.mediaPlayer replaceCurrentItemWithPlayerItem:self.playerItem];
+        
+        [UIView transitionFromView:self.playButton toView:self.stopButton
+                          duration:kAnimationDuration options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {
+              [self.mediaPlayer play];
+              self.myTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
+                                                              target:self
+                                                            selector:@selector(currentAudioTime:)
+                                                            userInfo:nil
+                                                             repeats:YES];
+        }];
     }
-    [self.mediaPlayer replaceCurrentItemWithPlayerItem:self.playerItem];
-    
-    [UIView transitionFromView:self.playButton toView:self.stopButton
-                      duration:kAnimationDuration options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {
-          [self.mediaPlayer play];
-          self.myTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
-                                                          target:self
-                                                        selector:@selector(currentAudioTime:)
-                                                        userInfo:nil
-                                                         repeats:YES];
-    }];
 }
 
 - (void)stopPlayingAction:(id)sender {
