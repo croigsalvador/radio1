@@ -172,12 +172,15 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
 
 - (void)stopPlayingAction:(id)sender {
     [self.mediaPlayer pause];
+    self.playerItem = nil;
+    [self.myTimer invalidate];
+    self.myTimer = nil;
+    
     [UIView transitionFromView:self.stopButton toView:self.playButton
                       duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve
                     completion:^(BOOL finished) {
-                        
-        [self.myTimer invalidate];
-        self.myTimer = nil;
+      
+        
         self.timeLabel.text = @"--";
     }];
     
