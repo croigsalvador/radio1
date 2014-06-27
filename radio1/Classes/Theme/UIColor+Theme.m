@@ -17,7 +17,7 @@
     return [UIColor blackColor];
 }
 + (UIColor *)secondaryColor {
-    return [UIColor colorWithRed:(30.0/255) green:(30.0/255) blue:(30.0/255) alpha:(30.0/255)];
+    return [UIColor colorWithRed:(30.0/255) green:(30.0/255) blue:(30.0/255) alpha:1.0];
 }
 
 
