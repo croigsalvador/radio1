@@ -140,7 +140,7 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
         
         _timeLabel = [UILabel baseLabelWithFrame:frame fontSize:12 bold:NO];
         _timeLabel.backgroundColor = [UIColor primaryColor];
-        _timeLabel.text = @"00:01";
+
     }
     return _timeLabel;
 }
@@ -175,9 +175,7 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
      
         }];
     }
-    
-    
-
+   
 }
 
 - (void)stopPlayingAction:(id)sender {
@@ -185,14 +183,10 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
     [self.myTimer invalidate];
     self.playerItem = nil;
     self.myTimer = nil;
-
+    self.timeLabel.text = @"--";
     [UIView transitionFromView:self.stopButton toView:self.playButton
                       duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve
-                    completion:^(BOOL finished) {
-      
-        
-        self.timeLabel.text = @"--";
-    }];
+                    completion:NULL];
     
 }
 
@@ -209,8 +203,10 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
 #pragma mark - Private Methods 
 
 - (void)currentAudioTime:(NSTimer *)timer {
-    CGFloat currentSecond = CMTimeGetSeconds([self.mediaPlayer currentTime]);
-    self.timeLabel.text =[NSString stringWithFormat:@"%.2f",currentSecond ];
+    if ([self.mediaPlayer currentItem]) {
+        CGFloat currentSecond = CMTimeGetSeconds([self.mediaPlayer currentTime]);
+        self.timeLabel.text =[NSString stringWithFormat:@"%.2f",currentSecond ];
+    }
 }
 
 #pragma mark - AV Player item notifications
