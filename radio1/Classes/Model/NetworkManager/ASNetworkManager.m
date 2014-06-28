@@ -96,14 +96,14 @@
 }
 
 
-- (AFHTTPRequestOperation *)getSongPlayDetails:(Song *)song completion:(void (^)(MediaAudio *result, NSError *error))completionBlock {
+- (AFHTTPRequestOperation *)getSongPlayDetails:(NSString *)mediaStringURL completion:(void (^)(MediaAudio *result, NSError *error))completionBlock {
     
-    if (!song) {
+    if (!mediaStringURL) {
         return nil;
     }
     
     NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"GET"
-                                                                                 URLString: song.mediaStringURL
+                                                                                 URLString:mediaStringURL
                                                                                 parameters:nil error:nil];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];

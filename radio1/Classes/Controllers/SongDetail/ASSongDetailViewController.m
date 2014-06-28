@@ -148,15 +148,20 @@ static const CGFloat kLabelHeight                           = 50.0;
 
 - (void)populateDataFromServer{
     __weak __typeof__(self) weakSelf = self;
-     self.songOp =[asNetworkManager getSongPlayDetails:self.song completion:^(MediaAudio *result, NSError *error) {
-        if (!error) {
-            NSLog(@"URL Audio play: %@ duration: %ld", result.audioURL, result.duration );
-            [weakSelf.playerViewController playAudioImmediatelyWithURL:result.audioURL imageURL:weakSelf.song.imageURL title:weakSelf.song.title artist:weakSelf.song.artist];
-        } else {
-            //error
-        }
-    }];
     
+    if (self.song.mediaStringURL) {
+         self.songOp =[asNetworkManager getSongPlayDetails:self.song.mediaStringURL completion:^(MediaAudio *result, NSError *error) {
+            if (!error) {
+                NSLog(@"URL Audio play: %@ duration: %ld", result.audioURL, result.duration );
+                [weakSelf.playerViewController playAudioImmediatelyWithURL:result.audioURL
+                                                                  imageURL:weakSelf.song.imageURL
+                                                                     title:weakSelf.song.title
+                                                                    artist:weakSelf.song.artist];
+            } else {
+                //error
+            }
+        }];
+    }
     self.tunesOp = [asNetworkManager getRelatedTunesWithArtistName:self.song.artist completion:^(NSArray *results, NSError *error) {
         if (!error) {
             weakSelf.tunesData = results;
@@ -205,6 +210,5 @@ static const CGFloat kLabelHeight                           = 50.0;
         [self.playerViewController playAudioImmediatelyWithURL:song.audioURL imageURL:song.imageURL title:song.title artist:song.album];
     }
 }
-
 
 @end
