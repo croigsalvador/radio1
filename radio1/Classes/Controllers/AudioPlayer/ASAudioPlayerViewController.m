@@ -166,12 +166,18 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
                                                       selector:@selector(currentAudioTime:)
                                                       userInfo:nil
                                                        repeats:YES];
+       
+        __weak __typeof__(self) weakSelf = self;
+        [[NSRunLoop mainRunLoop] addTimer:weakSelf.myTimer forMode:NSRunLoopCommonModes];
         [self.mediaPlayer play];
         [UIView transitionFromView:self.playButton toView:self.stopButton
                           duration:kAnimationDuration options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {
      
         }];
     }
+    
+    
+
 }
 
 - (void)stopPlayingAction:(id)sender {
@@ -179,7 +185,7 @@ static const UIEdgeInsets labelInsets           = {2.0, 4.0, 0.0, 0.0};
     [self.myTimer invalidate];
     self.playerItem = nil;
     self.myTimer = nil;
-    
+
     [UIView transitionFromView:self.stopButton toView:self.playButton
                       duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve
                     completion:^(BOOL finished) {
