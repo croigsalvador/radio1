@@ -12,22 +12,13 @@
 
 #import "MenuItem+Helper.h"
 
+#import "ASMenuViewController+Private.h"
 static NSString * const kMenuCellIdentifier                 = @"MenuCellIdentifier";
 
 static const CGFloat kHeightCell                            = 64.0;
 static const CGFloat kMinLineSpaceCells                     = 8.0;
 static const CGFloat kMinInterSpaceCells                    = 8.0;
 static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.0};
-
-@interface ASMenuViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
-
-@property (nonatomic, strong) NSOperationQueue *operationQueue;
-@property (nonatomic, strong) NSMutableArray *menuData;
-
-@property (nonatomic, strong) UICollectionView *menuCollectionView;
-@property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
-
-@end
 
 @implementation ASMenuViewController
 
@@ -57,7 +48,7 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
 #pragma mark - Private Methods
 
 //Example of loading data with nsinvocationoperation, the array is not too big but it's just an example of async operations
-- (void)populateMenuArrayAsynchronous {
+- (NSMutableArray *)populateMenuArrayAsynchronous {
     
     NSMutableArray *dataArray = [[NSMutableArray alloc] init];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"PlayListMenu" ofType:@"plist"];
@@ -69,6 +60,7 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
     }
     
     [self performSelectorOnMainThread:@selector(addDataToMenuArrayWithArray:) withObject:dataArray waitUntilDone:NO];
+    return dataArray;
 }
 
 - (void)addDataToMenuArrayWithArray:(NSMutableArray *)dataArray {
@@ -97,6 +89,7 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
         
         [_menuCollectionView registerClass:[ASMenuCollectionViewCell class] forCellWithReuseIdentifier:kMenuCellIdentifier];
     }
+
     return _menuCollectionView;
 }
 
@@ -116,7 +109,7 @@ static const UIEdgeInsets collectionSectionInsets           = {8.0, 8.0, 8.0, 8.
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView == self.menuCollectionView) {
-        MenuItem *item=  (MenuItem *)[self.menuData objectAtIndex:indexPath.row];
+        MenuItem *item = (MenuItem *)[self.menuData objectAtIndex:indexPath.row];
         ASMenuCollectionViewCell *cell = (ASMenuCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:kMenuCellIdentifier forIndexPath:indexPath];
         cell.backgroundColor = item.baseColor;
         [cell configureCellWithTitle:item.displayName imageName:item.imageIconName];
