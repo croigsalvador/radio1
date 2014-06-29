@@ -38,6 +38,26 @@
                ReferencedContainer = "container:radio1.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "50C350FC1960125D001FA9FF"
+               BuildableName = "radio1 Tests.xctest"
+               BlueprintName = "radio1 Tests"
+               ReferencedContainer = "container:radio1.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "50C35111196012A0001FA9FF"
+               BuildableName = "radio!UnitTesting.xctest"
+               BlueprintName = "radio!UnitTesting"
+               ReferencedContainer = "container:radio1.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

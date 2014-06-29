@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50C350F4195F8734001FA9FF /* ASMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0EB1959801700B4F800 /* ASMenuViewController.m */; };
+		50C351341960134D001FA9FF /* radio1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C351331960134D001FA9FF /* radio1Tests.m */; };
 		BFD90079641F4AA0AE24A9B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E39A8D6B0B264FC59C4F2976 /* libPods.a */; };
 		DC68FCE31959D2780039162B /* ASPlayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC68FCE21959D2780039162B /* ASPlayListViewController.m */; };
 		DC75C0B219597A9600B4F800 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC75C0B119597A9600B4F800 /* Foundation.framework */; };
@@ -16,11 +16,6 @@
 		DC75C0BC19597A9700B4F800 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC75C0BA19597A9700B4F800 /* InfoPlist.strings */; };
 		DC75C0BE19597A9700B4F800 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0BD19597A9700B4F800 /* main.m */; };
 		DC75C0C219597A9700B4F800 /* ASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0C119597A9700B4F800 /* ASAppDelegate.m */; };
-		DC75C0CB19597A9700B4F800 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC75C0CA19597A9700B4F800 /* XCTest.framework */; };
-		DC75C0CC19597A9700B4F800 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC75C0B119597A9600B4F800 /* Foundation.framework */; };
-		DC75C0CD19597A9700B4F800 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC75C0B519597A9600B4F800 /* UIKit.framework */; };
-		DC75C0D519597A9700B4F800 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC75C0D319597A9700B4F800 /* InfoPlist.strings */; };
-		DC75C0D719597A9700B4F800 /* ASMenuViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0D619597A9700B4F800 /* ASMenuViewControllerTest.m */; };
 		DC75C0E319597D6800B4F800 /* PlayListMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC75C0E219597D6800B4F800 /* PlayListMenu.plist */; };
 		DC75C0E919597F6200B4F800 /* ASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0E819597F6200B4F800 /* ASViewController.m */; };
 		DC75C0EC1959801700B4F800 /* ASMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC75C0EB1959801700B4F800 /* ASMenuViewController.m */; };
@@ -42,18 +37,17 @@
 		DCA8FEF3195C32C000E56283 /* ItunesSong+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8FEF2195C32C000E56283 /* ItunesSong+Helper.m */; };
 		DCB906B41959D6670072A35B /* ASSongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB906B31959D6670072A35B /* ASSongCollectionViewCell.m */; };
 		DCB906B7195AFCD70072A35B /* ASSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB906B6195AFCD70072A35B /* ASSongDetailViewController.m */; };
-		E4032A7C0D3746ED9CDFDE58 /* libPods-radio1Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A758AC30714758BA143433 /* libPods-radio1Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5047C5D4195F7FD7006F8753 /* PBXContainerItemProxy */ = {
+		50448CCC1960141100A0E03B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DC75C0A619597A9600B4F800 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DC75C0AD19597A9600B4F800;
 			remoteInfo = radio1;
 		};
-		DC75C0CE19597A9700B4F800 /* PBXContainerItemProxy */ = {
+		50C351351960134D001FA9FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DC75C0A619597A9600B4F800 /* Project object */;
 			proxyType = 1;
@@ -66,6 +60,9 @@
 		044B1D9153F3466F8AF6EB3B /* Pods-radio1Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-radio1Tests.xcconfig"; path = "Pods/Pods-radio1Tests.xcconfig"; sourceTree = "<group>"; };
 		04A758AC30714758BA143433 /* libPods-radio1Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-radio1Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C350F3195F8662001FA9FF /* ASMenuViewController+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ASMenuViewController+Private.h"; sourceTree = "<group>"; };
+		50C3512F1960134D001FA9FF /* radio1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = radio1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C351321960134D001FA9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50C351331960134D001FA9FF /* radio1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = radio1Tests.m; sourceTree = "<group>"; };
 		DC68FCE11959D2780039162B /* ASPlayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlayListViewController.h; sourceTree = "<group>"; };
 		DC68FCE21959D2780039162B /* ASPlayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlayListViewController.m; sourceTree = "<group>"; };
 		DC75C0AE19597A9600B4F800 /* radio1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radio1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +75,6 @@
 		DC75C0BF19597A9700B4F800 /* radio1-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "radio1-Prefix.pch"; sourceTree = "<group>"; };
 		DC75C0C019597A9700B4F800 /* ASAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASAppDelegate.h; sourceTree = "<group>"; };
 		DC75C0C119597A9700B4F800 /* ASAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASAppDelegate.m; sourceTree = "<group>"; };
-		DC75C0C919597A9700B4F800 /* radio1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = radio1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC75C0CA19597A9700B4F800 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DC75C0D219597A9700B4F800 /* radio1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "radio1Tests-Info.plist"; sourceTree = "<group>"; };
 		DC75C0D419597A9700B4F800 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -130,6 +126,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		50C3512C1960134D001FA9FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC75C0AB19597A9600B4F800 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,20 +144,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC75C0C619597A9700B4F800 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DC75C0CB19597A9700B4F800 /* XCTest.framework in Frameworks */,
-				DC75C0CD19597A9700B4F800 /* UIKit.framework in Frameworks */,
-				DC75C0CC19597A9700B4F800 /* Foundation.framework in Frameworks */,
-				E4032A7C0D3746ED9CDFDE58 /* libPods-radio1Tests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50C351301960134D001FA9FF /* radio1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				50C351331960134D001FA9FF /* radio1Tests.m */,
+				50C351311960134D001FA9FF /* Supporting Files */,
+			);
+			path = radio1Tests;
+			sourceTree = "<group>";
+		};
+		50C351311960134D001FA9FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50C351321960134D001FA9FF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DC68FCE01959D2640039162B /* PlayList */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +178,7 @@
 			children = (
 				DC75C0B719597A9600B4F800 /* radio1 */,
 				DC75C0D019597A9700B4F800 /* radio1Tests */,
+				50C351301960134D001FA9FF /* radio1Tests */,
 				DC75C0B019597A9600B4F800 /* Frameworks */,
 				DC75C0AF19597A9600B4F800 /* Products */,
 				FDCEC9FFC970470D82111427 /* Pods.xcconfig */,
@@ -180,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				DC75C0AE19597A9600B4F800 /* radio1.app */,
-				DC75C0C919597A9700B4F800 /* radio1Tests.xctest */,
+				50C3512F1960134D001FA9FF /* radio1Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -389,6 +399,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		50C3512E1960134D001FA9FF /* radio1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C351371960134D001FA9FF /* Build configuration list for PBXNativeTarget "radio1Tests" */;
+			buildPhases = (
+				50C3512B1960134D001FA9FF /* Sources */,
+				50C3512C1960134D001FA9FF /* Frameworks */,
+				50C3512D1960134D001FA9FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50C351361960134D001FA9FF /* PBXTargetDependency */,
+				50448CCD1960141100A0E03B /* PBXTargetDependency */,
+			);
+			name = radio1Tests;
+			productName = radio1Tests;
+			productReference = 50C3512F1960134D001FA9FF /* radio1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DC75C0AD19597A9600B4F800 /* radio1 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC75C0DA19597A9700B4F800 /* Build configuration list for PBXNativeTarget "radio1" */;
@@ -408,27 +437,6 @@
 			productReference = DC75C0AE19597A9600B4F800 /* radio1.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DC75C0C819597A9700B4F800 /* radio1Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DC75C0DD19597A9700B4F800 /* Build configuration list for PBXNativeTarget "radio1Tests" */;
-			buildPhases = (
-				CBD1814322114180B8D93894 /* Check Pods Manifest.lock */,
-				DC75C0C519597A9700B4F800 /* Sources */,
-				DC75C0C619597A9700B4F800 /* Frameworks */,
-				DC75C0C719597A9700B4F800 /* Resources */,
-				07AD124BCE2A4F7CA070479F /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DC75C0CF19597A9700B4F800 /* PBXTargetDependency */,
-				5047C5D5195F7FD7006F8753 /* PBXTargetDependency */,
-			);
-			name = radio1Tests;
-			productName = radio1Tests;
-			productReference = DC75C0C919597A9700B4F800 /* radio1Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -439,7 +447,8 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Alex Sanz";
 				TargetAttributes = {
-					DC75C0C819597A9700B4F800 = {
+					50C3512E1960134D001FA9FF = {
+						CreatedOnToolsVersion = 6.0;
 						TestTargetID = DC75C0AD19597A9600B4F800;
 					};
 				};
@@ -457,12 +466,19 @@
 			projectRoot = "";
 			targets = (
 				DC75C0AD19597A9600B4F800 /* radio1 */,
-				DC75C0C819597A9700B4F800 /* radio1Tests */,
+				50C3512E1960134D001FA9FF /* radio1Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		50C3512D1960134D001FA9FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC75C0AC19597A9600B4F800 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,32 +489,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC75C0C719597A9700B4F800 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DC75C0D519597A9700B4F800 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07AD124BCE2A4F7CA070479F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-radio1Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		483D5BB854D54AF0BBEE2998 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -529,24 +522,17 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CBD1814322114180B8D93894 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		50C3512B1960134D001FA9FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C351341960134D001FA9FF /* radio1Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC75C0AA19597A9600B4F800 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -576,27 +562,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC75C0C519597A9700B4F800 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DC75C0D719597A9700B4F800 /* ASMenuViewControllerTest.m in Sources */,
-				50C350F4195F8734001FA9FF /* ASMenuViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5047C5D5195F7FD7006F8753 /* PBXTargetDependency */ = {
+		50448CCD1960141100A0E03B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DC75C0AD19597A9600B4F800 /* radio1 */;
-			targetProxy = 5047C5D4195F7FD7006F8753 /* PBXContainerItemProxy */;
+			targetProxy = 50448CCC1960141100A0E03B /* PBXContainerItemProxy */;
 		};
-		DC75C0CF19597A9700B4F800 /* PBXTargetDependency */ = {
+		50C351361960134D001FA9FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DC75C0AD19597A9600B4F800 /* radio1 */;
-			targetProxy = DC75C0CE19597A9700B4F800 /* PBXContainerItemProxy */;
+			targetProxy = 50C351351960134D001FA9FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -620,6 +597,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		50C351381960134D001FA9FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/radio1.app/radio1";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = radio1Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		50C351391960134D001FA9FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/radio1.app/radio1";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = radio1Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
 		DC75C0D819597A9700B4F800 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -720,51 +739,18 @@
 			};
 			name = Release;
 		};
-		DC75C0DE19597A9700B4F800 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 044B1D9153F3466F8AF6EB3B /* Pods-radio1Tests.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/radio1.app/radio1";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "radio1/radio1-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "radio1Tests/radio1Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		DC75C0DF19597A9700B4F800 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 044B1D9153F3466F8AF6EB3B /* Pods-radio1Tests.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/radio1.app/radio1";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "radio1/radio1-Prefix.pch";
-				INFOPLIST_FILE = "radio1Tests/radio1Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		50C351371960134D001FA9FF /* Build configuration list for PBXNativeTarget "radio1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C351381960134D001FA9FF /* Debug */,
+				50C351391960134D001FA9FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DC75C0A919597A9600B4F800 /* Build configuration list for PBXProject "radio1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -779,15 +765,6 @@
 			buildConfigurations = (
 				DC75C0DB19597A9700B4F800 /* Debug */,
 				DC75C0DC19597A9700B4F800 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DC75C0DD19597A9700B4F800 /* Build configuration list for PBXNativeTarget "radio1Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DC75C0DE19597A9700B4F800 /* Debug */,
-				DC75C0DF19597A9700B4F800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
